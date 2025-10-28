@@ -83,11 +83,6 @@
             <router-link to="/sitemap" class="hover:text-white transition-colors">网站地图</router-link>
           </div>
         </div>
-        
-        <!-- Additional Info -->
-        <div class="mt-4 text-center text-gray-400 text-sm">
-          <p>所有游戏内容来源于互联网，仅供娱乐学习使用。如有版权问题请联系我们。</p>
-        </div>
       </div>
     </div>
     

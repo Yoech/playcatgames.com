@@ -97,6 +97,7 @@ export default {
             safe: '安全可靠'
         },
         cards: {
+            gamesCount: '50+ 游戏',
             gamesUpdate: '持续更新',
             rating: '4.8/5 评分',
             recommended: '玩家推荐'

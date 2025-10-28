@@ -97,6 +97,7 @@ export default {
             safe: 'Safe & Secure'
         },
         cards: {
+            gamesCount: '50+ Games',
             gamesUpdate: 'Regular Updates',
             rating: '4.8/5 Rating',
             recommended: 'Player Recommended'

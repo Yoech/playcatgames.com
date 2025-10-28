@@ -16,7 +16,7 @@
         <div
           v-for="category in categories"
           :key="category.id"
-          class="bg-white rounded-xl shadow-game-card hover:shadow-game-card-hover transition-all duration-300 transform hover:scale-105 cursor-pointer overflow-hidden group"
+          class="bg-white rounded-xl shadow-game-card hover:shadow-game-card-hover transition-all duration-300 transform hover:scale-105 cursor-pointer overflow-hidden group flex flex-col h-full"
           @click="selectCategory(category)"
         >
           <!-- Category Image -->
@@ -34,11 +34,11 @@
           </div>
           
           <!-- Category Info -->
-          <div class="p-6">
+          <div class="p-6 flex flex-col flex-grow">
             <p class="text-text-secondary mb-4 leading-relaxed">{{ $t(category.descriptionKey) }}</p>
             
             <!-- Featured Games -->
-            <div class="mb-4">
+            <div class="mb-6 flex-grow">
               <h4 class="text-sm font-semibold text-text-primary mb-2">{{ $t('categories.featuredGames') }}:</h4>
               <div class="flex flex-wrap gap-2">
                 <span
@@ -51,13 +51,15 @@
               </div>
             </div>
             
-            <!-- Action Button -->
-            <button
-              class="w-full bg-primary hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300"
-              @click.stop="browseCategory(category)"
-            >
-              {{ $t('categories.browse') }}
-            </button>
+            <!-- Action Button - Now at bottom -->
+            <div class="mt-auto">
+              <button
+                class="w-full bg-primary hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors duration-300"
+                @click.stop="browseCategory(category)"
+              >
+                {{ $t('categories.browse') }}
+              </button>
+            </div>
           </div>
         </div>
       </div>
