@@ -143,7 +143,8 @@ export default {
         },
         copyright: 'Tüm hakları saklıdır.',
         disclaimer: 'Tüm oyun içeriği yalnızca eğlence ve eğitim amaçları için internetten temin edilmiştir. Herhangi bir telif hakkı sorunu varsa lütfen bizimle iletişime geçin.',
-        backToTop: 'Başa Dön'
+        backToTop: 'Başa Dön',
+        friendlyLinks: 'Dost Siteler'
     },
 
     // Game Data

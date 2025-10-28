@@ -143,7 +143,8 @@ export default {
         },
         copyright: '全著作権所有。',
         disclaimer: 'すべてのゲームコンテンツはエンターテイメントと教育目的でのみインターネットから調達されています。著作権の問題がある場合はお問い合わせください。',
-        backToTop: 'トップに戻る'
+        backToTop: 'トップに戻る',
+        friendlyLinks: '友好サイト'
     },
 
     // Game Data

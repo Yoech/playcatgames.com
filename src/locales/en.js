@@ -149,7 +149,8 @@ export default {
         },
         copyright: 'All rights reserved.',
         disclaimer: 'All game content is sourced from the internet for entertainment and educational purposes only. Please contact us if there are any copyright issues.',
-        backToTop: 'Back to Top'
+        backToTop: 'Back to Top',
+        friendlyLinks: 'Friendly Links'
     },
 
     // Game Data

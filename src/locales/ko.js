@@ -143,7 +143,8 @@ export default {
         },
         copyright: '모든 권리 보유.',
         disclaimer: '모든 게임 콘텐츠는 오락 및 교육 목적으로만 인터넷에서 조달됩니다. 저작권 문제가 있으면 문의해 주세요.',
-        backToTop: '맨 위로'
+        backToTop: '맨 위로',
+        friendlyLinks: '친구 사이트'
     },
 
     // Game Data

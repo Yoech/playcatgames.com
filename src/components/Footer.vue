@@ -9,7 +9,7 @@
             <h3 class="ml-2 text-xl font-bold">PlayCatGames</h3>
           </div>
           <p class="text-gray-300 mb-4 leading-relaxed">
-            您的免费在线猫咪游戏集合destination。发现、游玩并享受数十款精彩的猫咪主题游戏。
+            {{ $t('footer.description') }}
           </p>
           
           <!-- Social Links -->
@@ -34,25 +34,25 @@
         
         <!-- Quick Links -->
         <div>
-          <h4 class="text-lg font-semibold mb-4">快速链接</h4>
+          <h4 class="text-lg font-semibold mb-4">{{ $t('footer.quickLinks') }}</h4>
           <ul class="space-y-2">
-            <li><a href="#games" class="text-gray-300 hover:text-white transition-colors">热门游戏</a></li>
-            <li><a href="#categories" class="text-gray-300 hover:text-white transition-colors">游戏分类</a></li>
-            <li><a href="#about" class="text-gray-300 hover:text-white transition-colors">关于我们</a></li>
-            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">最新游戏</a></li>
-            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">推荐游戏</a></li>
+            <li><a href="#games" class="text-gray-300 hover:text-white transition-colors">{{ $t('footer.links.popularGames') }}</a></li>
+            <li><a href="#categories" class="text-gray-300 hover:text-white transition-colors">{{ $t('nav.categories') }}</a></li>
+            <li><a href="#about" class="text-gray-300 hover:text-white transition-colors">{{ $t('nav.about') }}</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">{{ $t('footer.links.latestGames') }}</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">{{ $t('footer.links.recommendedGames') }}</a></li>
           </ul>
         </div>
         
         <!-- Game Categories -->
         <div>
-          <h4 class="text-lg font-semibold mb-4">游戏分类</h4>
+          <h4 class="text-lg font-semibold mb-4">{{ $t('footer.gameCategories') }}</h4>
           <ul class="space-y-2">
-            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">装扮游戏</a></li>
-            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">护理游戏</a></li>
-            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">解谜游戏</a></li>
-            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">街机游戏</a></li>
-            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">模拟游戏</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">{{ $t('games.filters.dressUp') }}</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">{{ $t('games.filters.care') }}</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">{{ $t('games.filters.puzzle') }}</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">{{ $t('games.filters.arcade') }}</a></li>
+            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">{{ $t('games.filters.simulation') }}</a></li>
           </ul>
         </div>
       </div>
@@ -60,7 +60,6 @@
       <!-- Friendly Links Section -->
       <div class="border-t border-gray-800 mt-8 pt-8">
         <div class="text-center">
-          <h4 class="text-lg font-semibold mb-6 text-white">友情链接</h4>
           <div class="flex flex-wrap justify-center items-center gap-6">
             <a
               v-for="link in friendlyLinks"
@@ -89,14 +88,14 @@
       <div class="border-t border-gray-800 mt-8 pt-8">
         <div class="flex flex-col md:flex-row justify-between items-center">
           <div class="text-gray-400 text-sm mb-4 md:mb-0">
-            © {{ currentYear }} PlayCatGames. 版权所有。
+            © {{ currentYear }} PlayCatGames. {{ $t('footer.copyright') }}
           </div>
           
           <div class="flex flex-wrap gap-6 text-sm text-gray-400">
-            <router-link to="/privacy" class="hover:text-white transition-colors">隐私政策</router-link>
-            <router-link to="/terms" class="hover:text-white transition-colors">使用条款</router-link>
-            <router-link to="/cookies" class="hover:text-white transition-colors">Cookie 政策</router-link>
-            <router-link to="/sitemap" class="hover:text-white transition-colors">网站地图</router-link>
+            <router-link to="/privacy" class="hover:text-white transition-colors">{{ $t('footer.links.privacy') }}</router-link>
+            <router-link to="/terms" class="hover:text-white transition-colors">{{ $t('footer.links.terms') }}</router-link>
+            <router-link to="/cookies" class="hover:text-white transition-colors">{{ $t('footer.links.cookies') }}</router-link>
+            <router-link to="/sitemap" class="hover:text-white transition-colors">{{ $t('footer.links.sitemap') }}</router-link>
           </div>
         </div>
       </div>
@@ -107,7 +106,7 @@
       v-show="showBackToTop"
       @click="scrollToTop"
       class="fixed bottom-8 right-8 bg-primary hover:bg-indigo-700 text-white p-3 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110"
-      aria-label="回到顶部"
+      :aria-label="$t('footer.backToTop')"
     >
       <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
@@ -118,10 +117,12 @@
 
 <script>
 import { ref, onMounted, onUnmounted } from 'vue'
+import { useI18n } from 'vue-i18n'
 
 export default {
   name: 'Footer',
   setup() {
+    const { t } = useI18n()
     const currentYear = new Date().getFullYear()
     const showBackToTop = ref(false)
     
@@ -185,6 +186,7 @@ export default {
     })
     
     return {
+      t,
       currentYear,
       showBackToTop,
       scrollToTop,

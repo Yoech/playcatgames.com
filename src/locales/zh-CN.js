@@ -149,7 +149,8 @@ export default {
         },
         copyright: '版权所有。',
         disclaimer: '所有游戏内容来源于互联网，仅供娱乐学习使用。如有版权问题请联系我们。',
-        backToTop: '回到顶部'
+        backToTop: '回到顶部',
+        friendlyLinks: '友情链接'
     },
 
     // Game Data

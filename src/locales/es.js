@@ -143,7 +143,8 @@ export default {
         },
         copyright: 'Todos los derechos reservados.',
         disclaimer: 'Todo el contenido del juego se obtiene de internet solo para fines de entretenimiento y educación. Por favor contáctanos si hay algún problema de derechos de autor.',
-        backToTop: 'Volver Arriba'
+        backToTop: 'Volver Arriba',
+        friendlyLinks: 'Enlaces Amigos'
     },
 
     // Game Data
