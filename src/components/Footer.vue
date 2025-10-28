@@ -1,7 +1,7 @@
 <template>
   <footer class="bg-gray-900 text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Brand Section -->
         <div class="lg:col-span-1">
           <div class="flex items-center mb-4">
@@ -53,18 +53,6 @@
             <li><a href="#" class="text-gray-300 hover:text-white transition-colors">解谜游戏</a></li>
             <li><a href="#" class="text-gray-300 hover:text-white transition-colors">街机游戏</a></li>
             <li><a href="#" class="text-gray-300 hover:text-white transition-colors">模拟游戏</a></li>
-          </ul>
-        </div>
-        
-        <!-- Support -->
-        <div>
-          <h4 class="text-lg font-semibold mb-4">支持</h4>
-          <ul class="space-y-2">
-            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">常见问题</a></li>
-            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">联系我们</a></li>
-            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">意见反馈</a></li>
-            <li><router-link to="/privacy" class="text-gray-300 hover:text-white transition-colors">隐私政策</router-link></li>
-            <li><router-link to="/terms" class="text-gray-300 hover:text-white transition-colors">使用条款</router-link></li>
           </ul>
         </div>
       </div>
