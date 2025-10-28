@@ -63,8 +63,8 @@
             <li><a href="#" class="text-gray-300 hover:text-white transition-colors">常见问题</a></li>
             <li><a href="#" class="text-gray-300 hover:text-white transition-colors">联系我们</a></li>
             <li><a href="#" class="text-gray-300 hover:text-white transition-colors">意见反馈</a></li>
-            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">隐私政策</a></li>
-            <li><a href="#" class="text-gray-300 hover:text-white transition-colors">使用条款</a></li>
+            <li><router-link to="/privacy" class="text-gray-300 hover:text-white transition-colors">隐私政策</router-link></li>
+            <li><router-link to="/terms" class="text-gray-300 hover:text-white transition-colors">使用条款</router-link></li>
           </ul>
         </div>
       </div>
@@ -77,10 +77,10 @@
           </div>
           
           <div class="flex flex-wrap gap-6 text-sm text-gray-400">
-            <a href="#" class="hover:text-white transition-colors">隐私政策</a>
-            <a href="#" class="hover:text-white transition-colors">使用条款</a>
-            <a href="#" class="hover:text-white transition-colors">Cookie 政策</a>
-            <a href="#" class="hover:text-white transition-colors">网站地图</a>
+            <router-link to="/privacy" class="hover:text-white transition-colors">隐私政策</router-link>
+            <router-link to="/terms" class="hover:text-white transition-colors">使用条款</router-link>
+            <router-link to="/cookies" class="hover:text-white transition-colors">Cookie 政策</router-link>
+            <router-link to="/sitemap" class="hover:text-white transition-colors">网站地图</router-link>
           </div>
         </div>
         

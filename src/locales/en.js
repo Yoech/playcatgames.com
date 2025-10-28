@@ -167,6 +167,219 @@ export default {
         error: 'Something went wrong',
         retry: 'Retry',
         play: 'Play Game',
-        language: 'Language'
+        language: 'Language',
+        backToHome: 'Back to Home'
+    },
+
+    // Legal Pages
+    legal: {
+        privacy: {
+            title: 'Privacy Policy',
+            lastUpdated: 'Last Updated',
+            sections: {
+                overview: {
+                    title: 'Overview',
+                    content: 'PlayCatGames ("we", "our", or "this website") is committed to protecting your privacy. This privacy policy explains how we collect, use, and protect the information you provide when using our website.'
+                },
+                dataCollection: {
+                    title: 'Information Collection',
+                    intro: 'We may collect the following types of information:',
+                    items: [
+                        'Automatically collected information: including your IP address, browser type, operating system, access time, and referring pages',
+                        'Cookies and similar technologies: used to improve your browsing experience and analyze website usage',
+                        'Language preferences: used to provide personalized multilingual experience',
+                        'Game usage data: including game preferences and usage statistics (anonymized)'
+                    ]
+                },
+                dataUsage: {
+                    title: 'Information Usage',
+                    intro: 'We use the collected information for:',
+                    items: [
+                        'Providing and maintaining our services',
+                        'Improving user experience and website functionality',
+                        'Analyzing website usage patterns',
+                        'Providing technical support',
+                        'Complying with legal obligations'
+                    ]
+                },
+                cookies: {
+                    title: 'Cookies',
+                    content: 'We use cookies to enhance your browsing experience. Cookies are small text files stored on your device that help us remember your preference settings. You can control cookie usage through your browser settings.'
+                },
+                thirdParty: {
+                    title: 'Third-Party Services',
+                    content: 'Our website may contain links to third-party websites. We are not responsible for the privacy practices of these websites. We recommend reviewing the privacy policy of each website you visit.'
+                },
+                security: {
+                    title: 'Data Security',
+                    content: 'We implement reasonable security measures to protect your personal information from unauthorized access, use, or disclosure. However, please note that no method of Internet transmission is 100% secure.'
+                },
+                children: {
+                    title: 'Children\'s Privacy',
+                    content: 'Our services are designed for users of all ages. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and discover that your child has provided us with personal information, please contact us.'
+                },
+                changes: {
+                    title: 'Policy Updates',
+                    content: 'We may update this privacy policy from time to time. Any changes will be posted on this page and the "Last Updated" date will be updated. We recommend reviewing this policy regularly.'
+                },
+                contact: {
+                    title: 'Contact Us',
+                    content: 'If you have any questions or concerns about this privacy policy, please contact us:',
+                    email: 'Email'
+                }
+            }
+        },
+        terms: {
+            title: 'Terms of Service',
+            lastUpdated: 'Last Updated',
+            sections: {
+                acceptance: {
+                    title: 'Acceptance of Terms',
+                    content: 'By accessing and using the PlayCatGames website, you agree to comply with these terms of service. If you do not agree to these terms, please do not use our services.'
+                },
+                services: {
+                    title: 'Service Description',
+                    content: 'PlayCatGames provides free online cat-themed games. Our services include game content, website functionality, and related services, all provided through our website.'
+                },
+                userConduct: {
+                    title: 'User Conduct',
+                    intro: 'When using our services, you agree not to:',
+                    items: [
+                        'Engage in any illegal or harmful activities',
+                        'Interfere with or disrupt the normal operation of the website',
+                        'Attempt to gain unauthorized access',
+                        'Upload or transmit harmful content',
+                        'Violate the rights or privacy of others'
+                    ]
+                },
+                intellectualProperty: {
+                    title: 'Intellectual Property',
+                    content: 'All content on the website, including but not limited to text, images, games, and designs, is protected by copyright and other intellectual property laws. You may not copy, distribute, or modify any content without explicit permission.'
+                },
+                disclaimer: {
+                    title: 'Disclaimer',
+                    content: 'Our services are provided "as is" without any express or implied warranties. We do not guarantee the accuracy, reliability, or availability of the services.'
+                },
+                liability: {
+                    title: 'Limitation of Liability',
+                    content: 'To the maximum extent permitted by law, PlayCatGames shall not be liable for any direct, indirect, incidental, or consequential damages arising from the use of our services.'
+                },
+                modifications: {
+                    title: 'Terms Modification',
+                    content: 'We reserve the right to modify these terms of service at any time. Modified terms will be posted on the website and take effect immediately. Continued use of services indicates your acceptance of the modified terms.'
+                },
+                termination: {
+                    title: 'Service Termination',
+                    content: 'We reserve the right to suspend or terminate your access to the services at any time, for any reason, without prior notice.'
+                },
+                governing: {
+                    title: 'Governing Law',
+                    content: 'These terms of service are governed by the laws of the People\'s Republic of China. Any disputes should be resolved through friendly consultation, and if consultation fails, submitted to arbitration.'
+                },
+                contact: {
+                    title: 'Contact Us',
+                    content: 'If you have any questions about these terms of service, please contact us:',
+                    email: 'Email'
+                }
+            }
+        },
+        cookies: {
+            title: 'Cookie Policy',
+            lastUpdated: 'Last Updated',
+            sections: {
+                what: {
+                    title: 'What are Cookies',
+                    content: 'Cookies are small text files that are stored on your computer or mobile device when you visit a website. They are widely used to make websites work or work more efficiently, as well as to provide information to website owners.'
+                },
+                usage: {
+                    title: 'How We Use Cookies',
+                    intro: 'We use cookies to:',
+                    items: [
+                        'Remember your language preference settings',
+                        'Analyze website traffic and usage patterns',
+                        'Improve website performance and user experience',
+                        'Provide personalized content',
+                        'Ensure website security'
+                    ]
+                },
+                types: {
+                    title: 'Types of Cookies',
+                    essential: {
+                        title: 'Essential Cookies',
+                        content: 'These cookies are necessary for the website to function and cannot be disabled. They are usually set only in response to your actions, such as setting privacy preferences, logging in, or filling out forms.'
+                    },
+                    functional: {
+                        title: 'Functional Cookies',
+                        content: 'These cookies enable the website to provide enhanced functionality and personalization. They may be set by us or by third-party providers whose services we have added to our pages.'
+                    },
+                    analytics: {
+                        title: 'Analytics Cookies',
+                        content: 'These cookies help us understand how visitors interact with the website. They provide information about the number of visitors, the time they spend on the website, and the pages they visit.'
+                    }
+                },
+                control: {
+                    title: 'Controlling Cookies',
+                    content: 'You can control and delete cookies through your browser settings. However, please note that disabling certain cookies may affect the website\'s functionality and your user experience.'
+                },
+                thirdParty: {
+                    title: 'Third-Party Cookies',
+                    content: 'Our website may contain cookies from third-party services, such as analytics tools or social media plugins. These third parties have their own privacy policies, and we recommend reviewing them.'
+                },
+                updates: {
+                    title: 'Policy Updates',
+                    content: 'We may update this Cookie Policy from time to time. Any changes will be posted on this page and the "Last Updated" date will be updated.'
+                },
+                contact: {
+                    title: 'Contact Us',
+                    content: 'If you have any questions about our use of cookies, please contact us:',
+                    email: 'Email'
+                }
+            }
+        }
+    },
+
+    // Sitemap
+    sitemap: {
+        title: 'Sitemap',
+        description: 'Find all pages and content on the PlayCatGames website',
+        sections: {
+            main: {
+                title: 'Main Pages',
+                home: 'Home',
+                games: 'Games',
+                categories: 'Categories',
+                about: 'About Us'
+            },
+            categories: {
+                title: 'Game Categories',
+                dressUp: 'Dress Up Games',
+                care: 'Care Games',
+                puzzle: 'Puzzle Games',
+                arcade: 'Arcade Games',
+                simulation: 'Simulation Games'
+            },
+            games: {
+                title: 'Popular Games'
+            },
+            support: {
+                title: 'Support',
+                faq: 'FAQ',
+                contact: 'Contact Us',
+                feedback: 'Feedback'
+            },
+            legal: {
+                title: 'Legal Pages',
+                privacy: 'Privacy Policy',
+                terms: 'Terms of Service',
+                cookies: 'Cookie Policy'
+            },
+            languages: {
+                title: 'Language Support'
+            }
+        },
+        info: {
+            title: 'About This Website',
+            description: 'PlayCatGames offers a rich collection of free online cat games, supporting multiple languages and providing the best gaming experience for players worldwide. All games are carefully selected to ensure they are safe, fun, and suitable for all ages.'
+        }
     }
 }

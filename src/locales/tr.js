@@ -167,6 +167,20 @@ export default {
         error: 'Bir şeyler yanlış gitti',
         retry: 'Tekrar Dene',
         play: 'Oyunu Oyna',
-        language: 'Dil'
+        language: 'Dil',
+        backToHome: 'Ana Sayfaya Dön'
+    },
+
+    // Legal Pages (simplified)
+    legal: {
+        privacy: { title: 'Gizlilik Politikası', lastUpdated: 'Son Güncelleme' },
+        terms: { title: 'Hizmet Şartları', lastUpdated: 'Son Güncelleme' },
+        cookies: { title: 'Çerez Politikası', lastUpdated: 'Son Güncelleme' }
+    },
+
+    // Sitemap
+    sitemap: {
+        title: 'Site Haritası',
+        description: 'PlayCatGames web sitesindeki tüm sayfaları ve içerikleri bulun'
     }
 }

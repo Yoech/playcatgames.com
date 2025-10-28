@@ -167,6 +167,29 @@ export default {
         error: '문제가 발생했습니다',
         retry: '다시 시도',
         play: '게임 플레이',
-        language: '언어'
+        language: '언어',
+        backToHome: '홈으로 돌아가기'
+    },
+
+    // Legal Pages (simplified)
+    legal: {
+        privacy: {
+            title: '개인정보처리방침',
+            lastUpdated: '최종 업데이트'
+        },
+        terms: {
+            title: '이용약관',
+            lastUpdated: '최종 업데이트'
+        },
+        cookies: {
+            title: '쿠키 정책',
+            lastUpdated: '최종 업데이트'
+        }
+    },
+
+    // Sitemap
+    sitemap: {
+        title: '사이트맵',
+        description: 'PlayCatGames 웹사이트의 모든 페이지와 콘텐츠 찾기'
     }
 }

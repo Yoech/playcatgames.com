@@ -167,6 +167,219 @@ export default {
         error: '出错了',
         retry: '重试',
         play: '开始游戏',
-        language: '语言'
+        language: '语言',
+        backToHome: '返回首页'
+    },
+
+    // Legal Pages
+    legal: {
+        privacy: {
+            title: '隐私政策',
+            lastUpdated: '最后更新',
+            sections: {
+                overview: {
+                    title: '概述',
+                    content: 'PlayCatGames（"我们"、"我们的"或"本网站"）致力于保护您的隐私。本隐私政策说明了我们如何收集、使用和保护您在使用我们网站时提供的信息。'
+                },
+                dataCollection: {
+                    title: '信息收集',
+                    intro: '我们可能收集以下类型的信息：',
+                    items: [
+                        '自动收集的信息：包括您的IP地址、浏览器类型、操作系统、访问时间和引用页面',
+                        'Cookies和类似技术：用于改善您的浏览体验和分析网站使用情况',
+                        '语言偏好：用于提供个性化的多语言体验',
+                        '游戏使用数据：包括游戏偏好和使用统计（匿名化处理）'
+                    ]
+                },
+                dataUsage: {
+                    title: '信息使用',
+                    intro: '我们使用收集的信息用于：',
+                    items: [
+                        '提供和维护我们的服务',
+                        '改善用户体验和网站功能',
+                        '分析网站使用模式',
+                        '提供技术支持',
+                        '遵守法律义务'
+                    ]
+                },
+                cookies: {
+                    title: 'Cookies',
+                    content: '我们使用cookies来增强您的浏览体验。Cookies是存储在您设备上的小文本文件，帮助我们记住您的偏好设置。您可以通过浏览器设置控制cookies的使用。'
+                },
+                thirdParty: {
+                    title: '第三方服务',
+                    content: '我们的网站可能包含指向第三方网站的链接。我们不对这些网站的隐私做法负责。我们建议您查看您访问的每个网站的隐私政策。'
+                },
+                security: {
+                    title: '数据安全',
+                    content: '我们采取合理的安全措施来保护您的个人信息免受未经授权的访问、使用或披露。但是，请注意，没有任何互联网传输方法是100%安全的。'
+                },
+                children: {
+                    title: '儿童隐私',
+                    content: '我们的服务面向所有年龄段的用户。我们不会故意收集13岁以下儿童的个人信息。如果您是家长或监护人，发现您的孩子向我们提供了个人信息，请联系我们。'
+                },
+                changes: {
+                    title: '政策更新',
+                    content: '我们可能会不时更新本隐私政策。任何更改将在此页面上发布，并更新"最后更新"日期。我们建议您定期查看本政策。'
+                },
+                contact: {
+                    title: '联系我们',
+                    content: '如果您对本隐私政策有任何疑问或关注，请通过以下方式联系我们：',
+                    email: '邮箱'
+                }
+            }
+        },
+        terms: {
+            title: '使用条款',
+            lastUpdated: '最后更新',
+            sections: {
+                acceptance: {
+                    title: '条款接受',
+                    content: '通过访问和使用PlayCatGames网站，您同意遵守这些使用条款。如果您不同意这些条款，请不要使用我们的服务。'
+                },
+                services: {
+                    title: '服务描述',
+                    content: 'PlayCatGames提供免费的在线猫咪主题游戏。我们的服务包括游戏内容、网站功能和相关服务，这些都通过我们的网站提供。'
+                },
+                userConduct: {
+                    title: '用户行为',
+                    intro: '使用我们的服务时，您同意不会：',
+                    items: [
+                        '从事任何非法或有害的活动',
+                        '干扰或破坏网站的正常运行',
+                        '尝试获取未经授权的访问权限',
+                        '上传或传输有害内容',
+                        '侵犯他人的权利或隐私'
+                    ]
+                },
+                intellectualProperty: {
+                    title: '知识产权',
+                    content: '网站上的所有内容，包括但不限于文本、图像、游戏和设计，均受版权和其他知识产权法律保护。未经明确许可，您不得复制、分发或修改任何内容。'
+                },
+                disclaimer: {
+                    title: '免责声明',
+                    content: '我们的服务按"现状"提供，不提供任何明示或暗示的保证。我们不保证服务的准确性、可靠性或可用性。'
+                },
+                liability: {
+                    title: '责任限制',
+                    content: '在法律允许的最大范围内，PlayCatGames不对因使用我们的服务而产生的任何直接、间接、偶然或后果性损害承担责任。'
+                },
+                modifications: {
+                    title: '条款修改',
+                    content: '我们保留随时修改这些使用条款的权利。修改后的条款将在网站上发布，并立即生效。继续使用服务表示您接受修改后的条款。'
+                },
+                termination: {
+                    title: '服务终止',
+                    content: '我们保留在任何时候，因任何原因，暂停或终止您对服务的访问的权利，无需事先通知。'
+                },
+                governing: {
+                    title: '适用法律',
+                    content: '这些使用条款受中华人民共和国法律管辖。任何争议应通过友好协商解决，协商不成的，提交仲裁解决。'
+                },
+                contact: {
+                    title: '联系我们',
+                    content: '如果您对这些使用条款有任何疑问，请联系我们：',
+                    email: '邮箱'
+                }
+            }
+        },
+        cookies: {
+            title: 'Cookie政策',
+            lastUpdated: '最后更新',
+            sections: {
+                what: {
+                    title: '什么是Cookies',
+                    content: 'Cookies是当您访问网站时存储在您的计算机或移动设备上的小文本文件。它们被广泛用于使网站工作或更高效地工作，以及向网站所有者提供信息。'
+                },
+                usage: {
+                    title: '我们如何使用Cookies',
+                    intro: '我们使用cookies来：',
+                    items: [
+                        '记住您的语言偏好设置',
+                        '分析网站流量和使用模式',
+                        '改善网站性能和用户体验',
+                        '提供个性化内容',
+                        '确保网站安全'
+                    ]
+                },
+                types: {
+                    title: 'Cookie类型',
+                    essential: {
+                        title: '必要Cookies',
+                        content: '这些cookies对网站的运行是必需的，无法禁用。它们通常仅在响应您的操作时设置，例如设置隐私偏好、登录或填写表单。'
+                    },
+                    functional: {
+                        title: '功能性Cookies',
+                        content: '这些cookies使网站能够提供增强的功能和个性化。它们可能由我们或我们已将其服务添加到页面的第三方提供商设置。'
+                    },
+                    analytics: {
+                        title: '分析Cookies',
+                        content: '这些cookies帮助我们了解访问者如何与网站互动。它们提供有关访问者数量、他们在网站上花费的时间以及他们访问的页面的信息。'
+                    }
+                },
+                control: {
+                    title: '控制Cookies',
+                    content: '您可以通过浏览器设置控制和删除cookies。但是，请注意，禁用某些cookies可能会影响网站的功能和您的用户体验。'
+                },
+                thirdParty: {
+                    title: '第三方Cookies',
+                    content: '我们的网站可能包含来自第三方服务的cookies，如分析工具或社交媒体插件。这些第三方有自己的隐私政策，我们建议您查看它们。'
+                },
+                updates: {
+                    title: '政策更新',
+                    content: '我们可能会不时更新此Cookie政策。任何更改将在此页面上发布，并更新"最后更新"日期。'
+                },
+                contact: {
+                    title: '联系我们',
+                    content: '如果您对我们的Cookie使用有任何疑问，请联系我们：',
+                    email: '邮箱'
+                }
+            }
+        }
+    },
+
+    // Sitemap
+    sitemap: {
+        title: '网站地图',
+        description: '查找PlayCatGames网站上的所有页面和内容',
+        sections: {
+            main: {
+                title: '主要页面',
+                home: '首页',
+                games: '游戏',
+                categories: '分类',
+                about: '关于我们'
+            },
+            categories: {
+                title: '游戏分类',
+                dressUp: '装扮游戏',
+                care: '护理游戏',
+                puzzle: '解谜游戏',
+                arcade: '街机游戏',
+                simulation: '模拟游戏'
+            },
+            games: {
+                title: '热门游戏'
+            },
+            support: {
+                title: '支持',
+                faq: '常见问题',
+                contact: '联系我们',
+                feedback: '意见反馈'
+            },
+            legal: {
+                title: '法律页面',
+                privacy: '隐私政策',
+                terms: '使用条款',
+                cookies: 'Cookie政策'
+            },
+            languages: {
+                title: '语言支持'
+            }
+        },
+        info: {
+            title: '关于本网站',
+            description: 'PlayCatGames提供丰富的免费在线猫咪游戏，支持多种语言，为全球玩家提供最佳的游戏体验。所有游戏都经过精心挑选，确保安全、有趣且适合所有年龄段。'
+        }
     }
 }

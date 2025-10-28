@@ -167,6 +167,20 @@ export default {
         error: 'Algo salió mal',
         retry: 'Reintentar',
         play: 'Jugar',
-        language: 'Idioma'
+        language: 'Idioma',
+        backToHome: 'Volver al Inicio'
+    },
+
+    // Legal Pages (simplified)
+    legal: {
+        privacy: { title: 'Política de Privacidad', lastUpdated: 'Última Actualización' },
+        terms: { title: 'Términos de Servicio', lastUpdated: 'Última Actualización' },
+        cookies: { title: 'Política de Cookies', lastUpdated: 'Última Actualización' }
+    },
+
+    // Sitemap
+    sitemap: {
+        title: 'Mapa del Sitio',
+        description: 'Encuentra todas las páginas y contenido en el sitio web de PlayCatGames'
     }
 }

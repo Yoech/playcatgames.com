@@ -167,6 +167,29 @@ export default {
         error: '何かが間違っています',
         retry: '再試行',
         play: 'ゲームをプレイ',
-        language: '言語'
+        language: '言語',
+        backToHome: 'ホームに戻る'
+    },
+
+    // Legal Pages (simplified)
+    legal: {
+        privacy: {
+            title: 'プライバシーポリシー',
+            lastUpdated: '最終更新'
+        },
+        terms: {
+            title: '利用規約',
+            lastUpdated: '最終更新'
+        },
+        cookies: {
+            title: 'クッキーポリシー',
+            lastUpdated: '最終更新'
+        }
+    },
+
+    // Sitemap
+    sitemap: {
+        title: 'サイトマップ',
+        description: 'PlayCatGamesウェブサイトのすべてのページとコンテンツを見つける'
     }
 }

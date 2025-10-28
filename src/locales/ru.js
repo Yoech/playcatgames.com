@@ -167,6 +167,20 @@ export default {
         error: 'Что-то пошло не так',
         retry: 'Повторить',
         play: 'Играть',
-        language: 'Язык'
+        language: 'Язык',
+        backToHome: 'Вернуться на Главную'
+    },
+
+    // Legal Pages (simplified)
+    legal: {
+        privacy: { title: 'Политика Конфиденциальности', lastUpdated: 'Последнее Обновление' },
+        terms: { title: 'Условия Обслуживания', lastUpdated: 'Последнее Обновление' },
+        cookies: { title: 'Политика Файлов Cookie', lastUpdated: 'Последнее Обновление' }
+    },
+
+    // Sitemap
+    sitemap: {
+        title: 'Карта Сайта',
+        description: 'Найдите все страницы и контент на сайте PlayCatGames'
     }
 }
