@@ -57,6 +57,34 @@
         </div>
       </div>
       
+      <!-- Friendly Links Section -->
+      <div class="border-t border-gray-800 mt-8 pt-8">
+        <div class="text-center">
+          <h4 class="text-lg font-semibold mb-6 text-white">友情链接</h4>
+          <div class="flex flex-wrap justify-center items-center gap-6">
+            <a
+              v-for="link in friendlyLinks"
+              :key="link.id"
+              :href="link.url"
+              :title="link.name"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group relative"
+            >
+              <img
+                :src="link.logo"
+                :alt="link.name"
+                class="h-12 w-auto max-w-[120px] object-contain transition-all duration-300 transform group-hover:scale-110 group-hover:brightness-110"
+              />
+              <!-- Tooltip -->
+              <div class="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-sm px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap z-10">
+                {{ link.name }}
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      
       <!-- Bottom Section -->
       <div class="border-t border-gray-800 mt-8 pt-8">
         <div class="flex flex-col md:flex-row justify-between items-center">
@@ -97,6 +125,46 @@ export default {
     const currentYear = new Date().getFullYear()
     const showBackToTop = ref(false)
     
+    // 友情链接数据
+    const friendlyLinks = ref([
+      {
+        id: 1,
+        name: 'Poki Games',
+        url: 'https://poki.com',
+        logo: 'https://img.poki-cdn.com/cdn-cgi/image/quality=78,width=200,height=60,fit=cover,f=auto/poki-logo.png'
+      },
+      {
+        id: 2,
+        name: 'CrazyGames',
+        url: 'https://crazygames.com',
+        logo: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTIwIDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iNDAiIGZpbGw9IiNmZmYiLz48dGV4dCB4PSI2MCIgeT0iMjUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMzMzMiPkNyYXp5R2FtZXM8L3RleHQ+PC9zdmc+'
+      },
+      {
+        id: 3,
+        name: 'Y8 Games',
+        url: 'https://y8.com',
+        logo: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTIwIDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iNDAiIGZpbGw9IiNmZmZmZmYiLz48dGV4dCB4PSI2MCIgeT0iMjUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiNGRjAwMDAiPllYIEdhbWVzPC90ZXh0Pjwvc3ZnPg=='
+      },
+      {
+        id: 4,
+        name: 'Friv Games',
+        url: 'https://friv.com',
+        logo: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTIwIDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iNDAiIGZpbGw9IiNmZmZmZmYiLz48dGV4dCB4PSI2MCIgeT0iMjUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiMwMDY2RkYiPkZyaXYgR2FtZXM8L3RleHQ+PC9zdmc+'
+      },
+      {
+        id: 5,
+        name: 'Miniclip',
+        url: 'https://miniclip.com',
+        logo: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTIwIDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iNDAiIGZpbGw9IiNmZmZmZmYiLz48dGV4dCB4PSI2MCIgeT0iMjUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiNGRjY2MDAiPk1pbmljbGlwPC90ZXh0Pjwvc3ZnPg=='
+      },
+      {
+        id: 6,
+        name: 'Kongregate',
+        url: 'https://kongregate.com',
+        logo: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIwIiBoZWlnaHQ9IjQwIiB2aWV3Qm94PSIwIDAgMTIwIDQwIiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMjAiIGhlaWdodD0iNDAiIGZpbGw9IiNmZmZmZmYiLz48dGV4dCB4PSI2MCIgeT0iMjUiIHRleHQtYW5jaG9yPSJtaWRkbGUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxMiIgZm9udC13ZWlnaHQ9ImJvbGQiIGZpbGw9IiM2NjAwQ0MiPktvbmdyZWdhdGU8L3RleHQ+PC9zdmc+'
+      }
+    ])
+    
     const handleScroll = () => {
       showBackToTop.value = window.pageYOffset > 300
     }
@@ -119,7 +187,8 @@ export default {
     return {
       currentYear,
       showBackToTop,
-      scrollToTop
+      scrollToTop,
+      friendlyLinks
     }
   }
 }
