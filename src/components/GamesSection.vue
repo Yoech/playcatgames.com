@@ -106,38 +106,32 @@
 </template>
 
 <script>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { gamesData, getPopularGames, getGamesByCategory, gameCategories, incrementGameClicks } from '@/data'
+import { gamesData, getPopularGames, getGamesByCategory, gameCategories, incrementGameClicks } from '@/data/gamesData'
+import { useSearch } from '@/stores/search'
 
 export default {
   name: 'GamesSection',
   setup() {
     const { t } = useI18n()
+    const { filteredGames, setActiveCategory, activeCategory } = useSearch()
+    
     const activeFilter = ref('all')
-    const games = ref([])
     const visibleCount = ref(6)
     
+    // 过滤器配置
     const filters = [
       { id: 'all', key: 'all' },
-      { id: 'dress-up', key: 'dressUp', category: gameCategories.DRESS_UP },
-      { id: 'care', key: 'care', category: gameCategories.CARE },
-      { id: 'puzzle', key: 'puzzle', category: gameCategories.PUZZLE },
-      { id: 'arcade', key: 'arcade', category: gameCategories.ARCADE },
-      { id: 'simulation', key: 'simulation', category: gameCategories.SIMULATION }
+      { id: gameCategories.PUZZLE, key: 'puzzle' },
+      { id: gameCategories.SIMULATION, key: 'simulation' },
+      { id: gameCategories.DRESS_UP, key: 'dressUp' },
+      { id: gameCategories.CARE, key: 'care' },
+      { id: gameCategories.ARCADE, key: 'arcade' },
+      { id: gameCategories.ACTION, key: 'action' }
     ]
     
-    // 获取筛选后的游戏
-    const filteredGames = computed(() => {
-      if (activeFilter.value === 'all') {
-        return getPopularGames(20) // 获取更多游戏用于展示
-      } else {
-        const filter = filters.find(f => f.id === activeFilter.value)
-        return filter ? getGamesByCategory(filter.category) : []
-      }
-    })
-    
-    // 显示的游戏（支持加载更多）
+    // 显示的游戏（结合搜索和分类过滤）
     const displayedGames = computed(() => {
       return filteredGames.value.slice(0, visibleCount.value)
     })
@@ -147,19 +141,26 @@ export default {
       return visibleCount.value < filteredGames.value.length
     })
     
-    // 处理游戏点击
+    // 游戏点击处理
     const playGame = (game) => {
       incrementGameClicks(game.id)
-      // 打开游戏（这里可以跳转到游戏页面或在新窗口打开）
-      const webLink = game.storeLinks.web
-      if (webLink) {
-        window.open(webLink, '_blank')
-      } else {
-        alert(`启动游戏: ${game.name}`)
+      
+      // 检查storeLinks并打开对应链接
+      if (game.storeLinks) {
+        // 优先打开web链接
+        if (game.storeLinks.web) {
+          window.open(game.storeLinks.web, '_blank')
+        } else {
+          // 如果没有web链接，打开第一个可用的链接
+          const firstAvailableLink = Object.values(game.storeLinks).find(link => link)
+          if (firstAvailableLink) {
+            window.open(firstAvailableLink, '_blank')
+          }
+        }
       }
     }
     
-    // 获取游戏标签的CSS类
+    // 获取标签颜色类
     const getTagClass = (tag) => {
       const colorMap = {
         pink: 'bg-pink-100 text-pink-700',
@@ -183,6 +184,7 @@ export default {
     // 设置过滤器
     const setFilter = (filterId) => {
       activeFilter.value = filterId
+      setActiveCategory(filterId)
       visibleCount.value = 6 // 重置显示数量
     }
     
@@ -191,15 +193,15 @@ export default {
       visibleCount.value += 6
     }
     
-    onMounted(() => {
-      games.value = gamesData
+    // 监听搜索变化，重置可见数量
+    watch(filteredGames, () => {
+      visibleCount.value = 6
     })
     
     return {
       t,
       activeFilter,
       filters,
-      games,
       displayedGames,
       canLoadMore,
       setFilter,

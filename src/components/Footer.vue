@@ -118,7 +118,7 @@
 <script>
 import { ref, onMounted, onUnmounted } from 'vue'
 import { useI18n } from 'vue-i18n'
-import { friendlyLinks } from '@/data'
+import { friendlyLinks } from '@/data/friendlyLinks'
 
 export default {
   name: 'Footer',

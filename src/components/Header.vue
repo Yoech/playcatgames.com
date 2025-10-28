@@ -31,19 +31,8 @@
         <!-- Right Side Actions -->
         <div class="flex items-center space-x-4">
           <!-- Search Bar -->
-          <div class="hidden sm:block relative">
-            <input
-              type="text"
-              :placeholder="$t('search.placeholder')"
-              v-model="searchQuery"
-              @input="handleSearch"
-              class="w-64 px-4 py-2 pr-10 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-            />
-            <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
-              <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
-              </svg>
-            </div>
+          <div class="hidden sm:block">
+            <SearchBox />
           </div>
           
           <!-- Language Selector -->
@@ -82,13 +71,7 @@
           
           <!-- Mobile Search -->
           <div class="px-3 py-2">
-            <input
-              type="text"
-              :placeholder="$t('search.placeholder')"
-              v-model="searchQuery"
-              @input="handleSearch"
-              class="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-            />
+            <SearchBox />
           </div>
           
           <!-- Mobile Language Selector -->
@@ -105,30 +88,24 @@
 <script>
 import { ref } from 'vue'
 import LanguageSelector from './LanguageSelector.vue'
+import SearchBox from './SearchBox.vue'
 
 export default {
   name: 'Header',
   components: {
-    LanguageSelector
+    LanguageSelector,
+    SearchBox
   },
   setup() {
     const mobileMenuOpen = ref(false)
-    const searchQuery = ref('')
     
     const toggleMobileMenu = () => {
       mobileMenuOpen.value = !mobileMenuOpen.value
     }
     
-    const handleSearch = () => {
-      // TODO: Implement search functionality
-      console.log('Searching for:', searchQuery.value)
-    }
-    
     return {
       mobileMenuOpen,
-      searchQuery,
-      toggleMobileMenu,
-      handleSearch
+      toggleMobileMenu
     }
   }
 }

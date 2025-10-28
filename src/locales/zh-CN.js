@@ -8,7 +8,11 @@ export default {
         about: '关于'
     },
     search: {
-        placeholder: '搜索猫咪游戏...'
+        placeholder: '搜索猫咪游戏...',
+        suggestions: {
+            game: '游戏',
+            tag: '标签'
+        }
     },
 
     // Hero Section

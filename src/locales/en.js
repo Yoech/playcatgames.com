@@ -8,7 +8,11 @@ export default {
         about: 'About'
     },
     search: {
-        placeholder: 'Search cat games...'
+        placeholder: 'Search cat games...',
+        suggestions: {
+            game: 'Game',
+            tag: 'Tag'
+        }
     },
 
     // Hero Section
