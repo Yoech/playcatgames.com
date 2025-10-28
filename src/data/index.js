@@ -4,7 +4,7 @@ export const friendlyLinks = [
         id: 1,
         name: 'Poki Games',
         url: 'https://poki.com',
-        logo: 'https://img.poki-cdn.com/cdn-cgi/image/quality=78,width=200,height=60,fit=cover,f=auto/poki-logo.png'
+        logo: '/images/logos/placeholder-logo.svg'
     },
     {
         id: 2,
