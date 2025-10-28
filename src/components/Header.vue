@@ -4,15 +4,18 @@
       <div class="flex items-center justify-between h-16">
         <!-- Logo -->
         <div class="flex items-center">
-          <div class="flex-shrink-0 flex items-center">
+          <router-link to="/" class="flex-shrink-0 flex items-center hover:opacity-80 transition-opacity">
             <span class="text-2xl">🐱</span>
             <h1 class="ml-2 text-xl font-bold text-primary">{{ $t('brand') }}</h1>
-          </div>
+          </router-link>
         </div>
         
         <!-- Desktop Navigation -->
         <nav class="hidden md:block">
           <div class="ml-10 flex items-baseline space-x-8">
+            <router-link to="/" class="text-text-primary hover:text-primary px-3 py-2 text-sm font-medium transition-colors">
+              {{ $t('nav.home') }}
+            </router-link>
             <a href="#games" class="text-text-primary hover:text-primary px-3 py-2 text-sm font-medium transition-colors">
               {{ $t('nav.games') }}
             </a>
@@ -64,6 +67,9 @@
       <!-- Mobile Navigation -->
       <div v-show="mobileMenuOpen" class="md:hidden">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t">
+          <router-link to="/" class="block px-3 py-2 text-base font-medium text-text-primary hover:text-primary">
+            {{ $t('nav.home') }}
+          </router-link>
           <a href="#games" class="block px-3 py-2 text-base font-medium text-text-primary hover:text-primary">
             {{ $t('nav.games') }}
           </a>

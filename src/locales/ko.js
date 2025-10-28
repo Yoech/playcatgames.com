@@ -2,6 +2,7 @@ export default {
     // Header
     brand: 'PlayCatGames',
     nav: {
+        home: '홈',
         games: '게임',
         categories: '카테고리',
         about: '소개'

@@ -56,7 +56,7 @@
           <!-- Game Info -->
           <div class="p-4">
             <h3 class="font-semibold text-text-primary mb-1 truncate">{{ game.title }}</h3>
-            <p class="text-sm text-text-secondary mb-2 line-clamp-2">{{ game.description }}</p>
+            <p class="text-sm text-text-secondary mb-2 line-clamp-2">{{ $t(game.descriptionKey) }}</p>
             
             <!-- Rating and Category -->
             <div class="flex items-center justify-between">
@@ -65,7 +65,7 @@
                 <span class="text-sm text-text-secondary ml-1">{{ game.rating }}</span>
               </div>
               <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full">
-                {{ game.category }}
+                {{ $t(`games.gameCategories.${game.type}`) }}
               </span>
             </div>
           </div>
@@ -108,90 +108,80 @@ export default {
       {
         id: 1,
         title: 'Kitty Loves Birds',
-        description: '帮助小猫咪捕捉飞鸟，展现你的反应速度',
+        descriptionKey: 'gameData.descriptions.kittyLovesBirds',
         image: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,w=408,h=408,fit=cover,f=auto/d19eec40e7e15ccf60bd734b83b03806.png',
-        category: '街机',
         rating: '4.8',
         type: 'arcade'
       },
       {
         id: 2,
         title: 'Cat Pizza',
-        description: '经营一家猫咪比萨店，为顾客制作美味比萨',
+        descriptionKey: 'gameData.descriptions.catPizza',
         image: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,w=408,h=408,fit=cover,f=auto/a4a95b8a0a094c17b4e6b21b0b35a3f4.png',
-        category: '模拟',
         rating: '4.7',
         type: 'simulation'
       },
       {
         id: 3,
         title: 'Funny Kitty Care',
-        description: '照顾可爱的小猫咪，喂食、洗澡和游戏',
+        descriptionKey: 'gameData.descriptions.funnyKittyCare',
         image: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,w=408,h=408,fit=cover,f=auto/b8c7e9d4f2a3c1b5e6f7d8c9a0b1c2d3.png',
-        category: '护理',
         rating: '4.9',
         type: 'care'
       },
       {
         id: 4,
         title: 'Cats Drop',
-        description: '叠猫咪游戏，测试你的平衡和策略技巧',
+        descriptionKey: 'gameData.descriptions.catsDrop',
         image: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,w=408,h=408,fit=cover,f=auto/e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9.png',
-        category: '解谜',
         rating: '4.6',
         type: 'puzzle'
       },
       {
         id: 5,
         title: 'Catpad',
-        description: '可爱的猫咪平台跳跃游戏',
+        descriptionKey: 'gameData.descriptions.catpad',
         image: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,w=408,h=408,fit=cover,f=auto/c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7.png',
-        category: '街机',
         rating: '4.5',
         type: 'arcade'
       },
       {
         id: 6,
         title: 'Funny Kitty Dressup',
-        description: '为可爱的小猫咪打扮，选择各种服装和配饰',
+        descriptionKey: 'gameData.descriptions.funnyKittyDressup',
         image: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,w=408,h=408,fit=cover,f=auto/a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3.png',
-        category: '装扮',
         rating: '4.8',
-        type: 'dress-up'
+        type: 'dressUp'
       },
       {
         id: 7,
         title: 'Kitty Cats',
-        description: '与多只可爱猫咪互动的休闲游戏',
+        descriptionKey: 'gameData.descriptions.kittyCats',
         image: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,w=408,h=408,fit=cover,f=auto/f7e6d5c4b3a2f1e0d9c8b7a6f5e4d3c2.png',
-        category: '模拟',
         rating: '4.4',
         type: 'simulation'
       },
       {
         id: 8,
         title: 'Dual Cat',
-        description: '控制两只猫咪同时闯关的挑战游戏',
+        descriptionKey: 'gameData.descriptions.dualCat',
         image: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,w=408,h=408,fit=cover,f=auto/b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6.png',
-        category: '解谜',
         rating: '4.7',
         type: 'puzzle'
       },
       {
         id: 9,
         title: 'Funny Kitty Haircut',
-        description: '为小猫咪设计时尚发型的美容游戏',
+        descriptionKey: 'gameData.descriptions.funnyKittyHaircut',
         image: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,w=408,h=408,fit=cover,f=auto/d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0.png',
-        category: '护理',
         rating: '4.6',
         type: 'care'
       },
       {
         id: 10,
         title: 'Cat Coffee Shop',
-        description: '经营猫咪咖啡店，制作美味饮品',
+        descriptionKey: 'gameData.descriptions.catCoffeeShop',
         image: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,w=408,h=408,fit=cover,f=auto/c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3.png',
-        category: '模拟',
         rating: '4.5',
         type: 'simulation'
       }
@@ -235,6 +225,7 @@ export default {
 .line-clamp-2 {
   display: -webkit-box;
   -webkit-line-clamp: 2;
+  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }

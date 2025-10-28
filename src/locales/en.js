@@ -2,6 +2,7 @@ export default {
     // Header
     brand: 'PlayCatGames',
     nav: {
+        home: 'Home',
         games: 'Games',
         categories: 'Categories',
         about: 'About'
@@ -94,6 +95,11 @@ export default {
             mobile: 'Mobile Friendly',
             instant: 'Instant Play',
             safe: 'Safe & Secure'
+        },
+        cards: {
+            gamesUpdate: 'Regular Updates',
+            rating: '4.8/5 Rating',
+            recommended: 'Player Recommended'
         },
         faq: {
             title: 'Frequently Asked Questions',

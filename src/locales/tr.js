@@ -2,6 +2,7 @@ export default {
     // Header
     brand: 'PlayCatGames',
     nav: {
+        home: 'Ana Sayfa',
         games: 'Oyunlar',
         categories: 'Kategoriler',
         about: 'Hakkında'

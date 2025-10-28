@@ -2,6 +2,7 @@ export default {
     // Header
     brand: 'PlayCatGames',
     nav: {
+        home: '首页',
         games: '游戏',
         categories: '分类',
         about: '关于'
@@ -94,6 +95,11 @@ export default {
             mobile: '移动端友好',
             instant: '即时游戏',
             safe: '安全可靠'
+        },
+        cards: {
+            gamesUpdate: '持续更新',
+            rating: '4.8/5 评分',
+            recommended: '玩家推荐'
         },
         faq: {
             title: '常见问题',
