@@ -166,6 +166,34 @@ export default {
             dualCat: 'Challenge game controlling two cats simultaneously',
             funnyKittyHaircut: 'Beauty game designing fashionable hairstyles for kittens',
             catCoffeeShop: 'Run a cat coffee shop and make delicious drinks'
+        },
+        categories: {
+            puzzle: 'Puzzle',
+            simulation: 'Simulation',
+            casual: 'Casual',
+            action: 'Action',
+            adventure: 'Adventure',
+            strategy: 'Strategy',
+            sports: 'Sports',
+            racing: 'Racing',
+            dressup: 'Dress Up',
+            care: 'Care'
+        },
+        tags: {
+            cute: 'Cute',
+            anime: 'Anime',
+            dark: 'Dark',
+            funny: 'Funny',
+            educational: 'Educational',
+            multiplayer: 'Multiplayer',
+            relaxing: 'Relaxing',
+            challenging: 'Challenging',
+            colorful: 'Colorful',
+            simple: 'Simple',
+            complex: 'Complex',
+            family: 'Family Friendly',
+            kids: 'Kids',
+            adult: 'Adult'
         }
     },
 

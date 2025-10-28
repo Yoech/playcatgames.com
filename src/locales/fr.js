@@ -160,6 +160,34 @@ export default {
             dualCat: 'Jeu de défi contrôlant deux chats simultanément',
             funnyKittyHaircut: 'Jeu de beauté concevant des coiffures à la mode pour les chatons',
             catCoffeeShop: 'Dirigez un café de chats et faites de délicieuses boissons'
+        },
+        categories: {
+            puzzle: 'Puzzle',
+            simulation: 'Simulation',
+            casual: 'Casual',
+            action: 'Action',
+            adventure: 'Adventure',
+            strategy: 'Strategy',
+            sports: 'Sports',
+            racing: 'Racing',
+            dressup: 'Dress Up',
+            care: 'Care'
+        },
+        tags: {
+            cute: 'Cute',
+            anime: 'Anime',
+            dark: 'Dark',
+            funny: 'Funny',
+            educational: 'Educational',
+            multiplayer: 'Multiplayer',
+            relaxing: 'Relaxing',
+            challenging: 'Challenging',
+            colorful: 'Colorful',
+            simple: 'Simple',
+            complex: 'Complex',
+            family: 'Family Friendly',
+            kids: 'Kids',
+            adult: 'Adult'
         }
     },
 

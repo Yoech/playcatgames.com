@@ -160,6 +160,34 @@ export default {
             dualCat: 'İki kediyi aynı anda kontrol eden meydan okuma oyunu',
             funnyKittyHaircut: 'Kediler için modaya uygun saç stilleri tasarlayan güzellik oyunu',
             catCoffeeShop: 'Bir kedi kahvesi işletin ve lezzetli içecekler yapın'
+        },
+        categories: {
+            puzzle: 'Bulmaca',
+            simulation: 'Simülasyon',
+            casual: 'Gündelik',
+            action: 'Aksiyon',
+            adventure: 'Macera',
+            strategy: 'Strateji',
+            sports: 'Spor',
+            racing: 'Yarış',
+            dressup: 'Giydirme',
+            care: 'Bakım'
+        },
+        tags: {
+            cute: 'Sevimli',
+            anime: 'Anime',
+            dark: 'Karanlık',
+            funny: 'Komik',
+            educational: 'Eğitici',
+            multiplayer: 'Çok Oyunculu',
+            relaxing: 'Rahatlatıcı',
+            challenging: 'Zorlu',
+            colorful: 'Renkli',
+            simple: 'Basit',
+            complex: 'Karmaşık',
+            family: 'Aile Dostu',
+            kids: 'Çocuklar',
+            adult: 'Yetişkin'
         }
     },
 

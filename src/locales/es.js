@@ -160,6 +160,34 @@ export default {
             dualCat: 'Juego de desafío controlando dos gatos simultáneamente',
             funnyKittyHaircut: 'Juego de belleza diseñando peinados de moda para gatitos',
             catCoffeeShop: 'Dirige una cafetería de gatos y haz bebidas deliciosas'
+        },
+        categories: {
+            puzzle: 'Rompecabezas',
+            simulation: 'Simulación',
+            casual: 'Casual',
+            action: 'Acción',
+            adventure: 'Aventura',
+            strategy: 'Estrategia',
+            sports: 'Deportes',
+            racing: 'Carreras',
+            dressup: 'Vestir',
+            care: 'Cuidado'
+        },
+        tags: {
+            cute: 'Lindo',
+            anime: 'Anime',
+            dark: 'Oscuro',
+            funny: 'Divertido',
+            educational: 'Educativo',
+            multiplayer: 'Multijugador',
+            relaxing: 'Relajante',
+            challenging: 'Desafiante',
+            colorful: 'Colorido',
+            simple: 'Simple',
+            complex: 'Complejo',
+            family: 'Familiar',
+            kids: 'Niños',
+            adult: 'Adulto'
         }
     },
 

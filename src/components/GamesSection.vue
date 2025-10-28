@@ -16,7 +16,7 @@
         <button
           v-for="filter in filters"
           :key="filter.id"
-          @click="activeFilter = filter.id"
+          @click="setFilter(filter.id)"
           :class="[
             'px-6 py-2 rounded-full font-medium transition-all duration-300',
             activeFilter === filter.id
@@ -31,16 +31,16 @@
       <!-- Games Grid -->
       <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
         <div
-          v-for="game in filteredGames"
+          v-for="game in displayedGames"
           :key="game.id"
-          class="game-card bg-white rounded-xl shadow-game-card hover:shadow-game-card-hover cursor-pointer overflow-hidden group"
+          class="game-card bg-white rounded-xl shadow-game-card hover:shadow-game-card-hover cursor-pointer overflow-hidden group transition-all duration-300"
           @click="playGame(game)"
         >
           <!-- Game Image -->
           <div class="relative aspect-square overflow-hidden">
             <img
-              :src="game.image"
-              :alt="game.title"
+              :src="game.logo"
+              :alt="game.name"
               class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
               loading="lazy"
             />
@@ -51,35 +51,55 @@
                 </svg>
               </div>
             </div>
+            
+            <!-- Rating Badge -->
+            <div class="absolute top-2 right-2 bg-black bg-opacity-70 text-white text-xs px-2 py-1 rounded-full flex items-center">
+              <svg class="w-3 h-3 text-yellow-400 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+              </svg>
+              {{ game.rating }}
+            </div>
           </div>
           
           <!-- Game Info -->
           <div class="p-4">
-            <h3 class="font-semibold text-text-primary mb-1 truncate">{{ game.title }}</h3>
-            <p class="text-sm text-text-secondary mb-2 line-clamp-2">{{ $t(game.descriptionKey) }}</p>
+            <h3 class="font-bold text-text-primary mb-2 line-clamp-1">{{ $t(game.nameKey) || game.name }}</h3>
+            <p class="text-sm text-text-secondary mb-3 line-clamp-2">{{ $t(game.descriptionKey) || game.description }}</p>
             
-            <!-- Rating and Category -->
-            <div class="flex items-center justify-between">
-              <div class="flex items-center">
-                <span class="text-yellow-400 text-sm">★</span>
-                <span class="text-sm text-text-secondary ml-1">{{ game.rating }}</span>
-              </div>
-              <span class="text-xs bg-purple-100 text-purple-700 px-2 py-1 rounded-full">
-                {{ $t(`games.gameCategories.${game.type}`) }}
+            <!-- Game Tags -->
+            <div class="flex flex-wrap gap-1 mb-3">
+              <span
+                v-for="tag in game.tags.slice(0, 2)"
+                :key="tag.id"
+                :class="getTagClass(tag)"
+                class="text-xs px-2 py-1 rounded-full font-medium"
+              >
+                {{ $t(`gameTags.${tag.id}`) || tag.id }}
               </span>
+            </div>
+            
+            <!-- Play Stats -->
+            <div class="flex items-center justify-between text-xs text-text-secondary">
+              <span class="flex items-center">
+                <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
+                </svg>
+                {{ game.clickCount.toLocaleString() }}
+              </span>
+              <span class="text-primary font-medium">{{ $t(`gameCategories.${game.category}`) || game.category }}</span>
             </div>
           </div>
         </div>
       </div>
       
       <!-- Load More Button -->
-      <div class="text-center mt-12">
-                  <button
-            @click="loadMoreGames"
-            class="bg-primary hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105"
-          >
-            {{ $t('games.loadMore') }}
-          </button>
+      <div class="text-center mt-12" v-if="canLoadMore">
+        <button
+          @click="loadMoreGames"
+          class="bg-primary hover:bg-indigo-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors duration-300 shadow-lg hover:shadow-xl"
+        >
+          {{ $t('games.loadMore') }}
+        </button>
       </div>
     </div>
   </section>
@@ -87,141 +107,119 @@
 
 <script>
 import { ref, computed, onMounted } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { gamesData, getPopularGames, getGamesByCategory, gameCategories, incrementGameClicks } from '@/data'
 
 export default {
   name: 'GamesSection',
   setup() {
+    const { t } = useI18n()
     const activeFilter = ref('all')
     const games = ref([])
+    const visibleCount = ref(6)
     
     const filters = [
       { id: 'all', key: 'all' },
-      { id: 'dress-up', key: 'dressUp' },
-      { id: 'care', key: 'care' },
-      { id: 'puzzle', key: 'puzzle' },
-      { id: 'arcade', key: 'arcade' },
-      { id: 'simulation', key: 'simulation' }
+      { id: 'dress-up', key: 'dressUp', category: gameCategories.DRESS_UP },
+      { id: 'care', key: 'care', category: gameCategories.CARE },
+      { id: 'puzzle', key: 'puzzle', category: gameCategories.PUZZLE },
+      { id: 'arcade', key: 'arcade', category: gameCategories.ARCADE },
+      { id: 'simulation', key: 'simulation', category: gameCategories.SIMULATION }
     ]
     
-    // Mock games data (similar to Poki's cat games)
-    const mockGames = [
-      {
-        id: 1,
-        title: 'Kitty Loves Birds',
-        descriptionKey: 'gameData.descriptions.kittyLovesBirds',
-        image: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,w=408,h=408,fit=cover,f=auto/d19eec40e7e15ccf60bd734b83b03806.png',
-        rating: '4.8',
-        type: 'arcade'
-      },
-      {
-        id: 2,
-        title: 'Cat Pizza',
-        descriptionKey: 'gameData.descriptions.catPizza',
-        image: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,w=408,h=408,fit=cover,f=auto/a4a95b8a0a094c17b4e6b21b0b35a3f4.png',
-        rating: '4.7',
-        type: 'simulation'
-      },
-      {
-        id: 3,
-        title: 'Funny Kitty Care',
-        descriptionKey: 'gameData.descriptions.funnyKittyCare',
-        image: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,w=408,h=408,fit=cover,f=auto/b8c7e9d4f2a3c1b5e6f7d8c9a0b1c2d3.png',
-        rating: '4.9',
-        type: 'care'
-      },
-      {
-        id: 4,
-        title: 'Cats Drop',
-        descriptionKey: 'gameData.descriptions.catsDrop',
-        image: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,w=408,h=408,fit=cover,f=auto/e4f5a6b7c8d9e0f1a2b3c4d5e6f7a8b9.png',
-        rating: '4.6',
-        type: 'puzzle'
-      },
-      {
-        id: 5,
-        title: 'Catpad',
-        descriptionKey: 'gameData.descriptions.catpad',
-        image: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,w=408,h=408,fit=cover,f=auto/c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6f7.png',
-        rating: '4.5',
-        type: 'arcade'
-      },
-      {
-        id: 6,
-        title: 'Funny Kitty Dressup',
-        descriptionKey: 'gameData.descriptions.funnyKittyDressup',
-        image: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,w=408,h=408,fit=cover,f=auto/a8b9c0d1e2f3a4b5c6d7e8f9a0b1c2d3.png',
-        rating: '4.8',
-        type: 'dressUp'
-      },
-      {
-        id: 7,
-        title: 'Kitty Cats',
-        descriptionKey: 'gameData.descriptions.kittyCats',
-        image: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,w=408,h=408,fit=cover,f=auto/f7e6d5c4b3a2f1e0d9c8b7a6f5e4d3c2.png',
-        rating: '4.4',
-        type: 'simulation'
-      },
-      {
-        id: 8,
-        title: 'Dual Cat',
-        descriptionKey: 'gameData.descriptions.dualCat',
-        image: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,w=408,h=408,fit=cover,f=auto/b1c2d3e4f5a6b7c8d9e0f1a2b3c4d5e6.png',
-        rating: '4.7',
-        type: 'puzzle'
-      },
-      {
-        id: 9,
-        title: 'Funny Kitty Haircut',
-        descriptionKey: 'gameData.descriptions.funnyKittyHaircut',
-        image: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,w=408,h=408,fit=cover,f=auto/d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0.png',
-        rating: '4.6',
-        type: 'care'
-      },
-      {
-        id: 10,
-        title: 'Cat Coffee Shop',
-        descriptionKey: 'gameData.descriptions.catCoffeeShop',
-        image: 'https://img.poki-cdn.com/cdn-cgi/image/q=78,w=408,h=408,fit=cover,f=auto/c8d9e0f1a2b3c4d5e6f7a8b9c0d1e2f3.png',
-        rating: '4.5',
-        type: 'simulation'
-      }
-    ]
-    
+    // 获取筛选后的游戏
     const filteredGames = computed(() => {
       if (activeFilter.value === 'all') {
-        return games.value
+        return getPopularGames(20) // 获取更多游戏用于展示
+      } else {
+        const filter = filters.find(f => f.id === activeFilter.value)
+        return filter ? getGamesByCategory(filter.category) : []
       }
-      return games.value.filter(game => game.type === activeFilter.value)
     })
     
-    const loadMoreGames = () => {
-      // Mock loading more games
-      console.log('Loading more games...')
+    // 显示的游戏（支持加载更多）
+    const displayedGames = computed(() => {
+      return filteredGames.value.slice(0, visibleCount.value)
+    })
+    
+    // 是否可以加载更多
+    const canLoadMore = computed(() => {
+      return visibleCount.value < filteredGames.value.length
+    })
+    
+    // 处理游戏点击
+    const playGame = (game) => {
+      incrementGameClicks(game.id)
+      // 打开游戏（这里可以跳转到游戏页面或在新窗口打开）
+      const webLink = game.storeLinks.web
+      if (webLink) {
+        window.open(webLink, '_blank')
+      } else {
+        alert(`启动游戏: ${game.name}`)
+      }
     }
     
-    const playGame = (game) => {
-      // Mock game launch
-      console.log('Launching game:', game.title)
-      alert(`启动游戏: ${game.title}`)
+    // 获取游戏标签的CSS类
+    const getTagClass = (tag) => {
+      const colorMap = {
+        pink: 'bg-pink-100 text-pink-700',
+        purple: 'bg-purple-100 text-purple-700',
+        gray: 'bg-gray-100 text-gray-700',
+        yellow: 'bg-yellow-100 text-yellow-700',
+        green: 'bg-green-100 text-green-700',
+        red: 'bg-red-100 text-red-700',
+        blue: 'bg-blue-100 text-blue-700',
+        indigo: 'bg-indigo-100 text-indigo-700',
+        orange: 'bg-orange-100 text-orange-700',
+        amber: 'bg-amber-100 text-amber-700',
+        cyan: 'bg-cyan-100 text-cyan-700',
+        teal: 'bg-teal-100 text-teal-700',
+        stone: 'bg-stone-100 text-stone-700',
+        emerald: 'bg-emerald-100 text-emerald-700'
+      }
+      return colorMap[tag.color] || 'bg-gray-100 text-gray-700'
+    }
+    
+    // 设置过滤器
+    const setFilter = (filterId) => {
+      activeFilter.value = filterId
+      visibleCount.value = 6 // 重置显示数量
+    }
+    
+    // 加载更多游戏
+    const loadMoreGames = () => {
+      visibleCount.value += 6
     }
     
     onMounted(() => {
-      games.value = mockGames
+      games.value = gamesData
     })
     
     return {
+      t,
       activeFilter,
       filters,
       games,
-      filteredGames,
+      displayedGames,
+      canLoadMore,
+      setFilter,
       loadMoreGames,
-      playGame
+      playGame,
+      getTagClass
     }
   }
 }
 </script>
 
 <style scoped>
+.line-clamp-1 {
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
 .line-clamp-2 {
   display: -webkit-box;
   -webkit-line-clamp: 2;

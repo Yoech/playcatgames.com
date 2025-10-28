@@ -160,6 +160,34 @@ export default {
             dualCat: 'Игра-вызов, управляющая двумя кошками одновременно',
             funnyKittyHaircut: 'Игра красоты, создающая модные прически для котят',
             catCoffeeShop: 'Управляйте кошачьим кафе и готовьте вкусные напитки'
+        },
+        categories: {
+            puzzle: 'Головоломка',
+            simulation: 'Симуляция',
+            casual: 'Казуальная',
+            action: 'Экшн',
+            adventure: 'Приключения',
+            strategy: 'Стратегия',
+            sports: 'Спорт',
+            racing: 'Гонки',
+            dressup: 'Одевалки',
+            care: 'Уход'
+        },
+        tags: {
+            cute: 'Милые',
+            anime: 'Аниме',
+            dark: 'Темные',
+            funny: 'Смешные',
+            educational: 'Образовательные',
+            multiplayer: 'Многопользовательские',
+            relaxing: 'Расслабляющие',
+            challenging: 'Сложные',
+            colorful: 'Красочные',
+            simple: 'Простые',
+            complex: 'Сложные',
+            family: 'Семейные',
+            kids: 'Детские',
+            adult: 'Взрослые'
         }
     },
 

@@ -160,6 +160,34 @@ export default {
             dualCat: '두 마리 고양이를 동시에 조작하는 도전 게임',
             funnyKittyHaircut: '새끼 고양이를 위한 패셔너블한 헤어스타일을 디자인하는 미용 게임',
             catCoffeeShop: '고양이 카페를 운영하고 맛있는 음료를 만드세요'
+        },
+        categories: {
+            puzzle: '퍼즐',
+            simulation: '시뮬레이션',
+            casual: '캐주얼',
+            action: '액션',
+            adventure: '어드벤처',
+            strategy: '전략',
+            sports: '스포츠',
+            racing: '레이싱',
+            dressup: '드레스업',
+            care: '케어'
+        },
+        tags: {
+            cute: '귀여운',
+            anime: '애니메',
+            dark: '다크',
+            funny: '재미있는',
+            educational: '교육적',
+            multiplayer: '멀티플레이어',
+            relaxing: '편안한',
+            challenging: '도전적인',
+            colorful: '다채로운',
+            simple: '간단한',
+            complex: '복잡한',
+            family: '가족 친화적',
+            kids: '아이들',
+            adult: '성인'
         }
     },
 

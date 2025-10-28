@@ -160,6 +160,34 @@ export default {
             dualCat: '二匹の猫を同時にコントロールするチャレンジゲーム',
             funnyKittyHaircut: '子猫のためのファッショナブルなヘアスタイルをデザインする美容ゲーム',
             catCoffeeShop: '猫カフェを経営し、美味しい飲み物を作りましょう'
+        },
+        categories: {
+            puzzle: 'パズル',
+            simulation: 'シミュレーション',
+            casual: 'カジュアル',
+            action: 'アクション',
+            adventure: 'アドベンチャー',
+            strategy: 'ストラテジー',
+            sports: 'スポーツ',
+            racing: 'レーシング',
+            dressup: 'ドレスアップ',
+            care: 'ケア'
+        },
+        tags: {
+            cute: 'かわいい',
+            anime: 'アニメ',
+            dark: 'ダーク',
+            funny: '面白い',
+            educational: '教育的',
+            multiplayer: 'マルチプレイヤー',
+            relaxing: 'リラックス',
+            challenging: 'チャレンジング',
+            colorful: 'カラフル',
+            simple: 'シンプル',
+            complex: '複雑',
+            family: 'ファミリーフレンドリー',
+            kids: '子供向け',
+            adult: '大人向け'
         }
     },
 

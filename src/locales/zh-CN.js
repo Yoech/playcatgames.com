@@ -166,6 +166,34 @@ export default {
             dualCat: '控制两只猫咪同时闯关的挑战游戏',
             funnyKittyHaircut: '为小猫咪设计时尚发型的美容游戏',
             catCoffeeShop: '经营猫咪咖啡店，制作美味饮品'
+        },
+        categories: {
+            puzzle: '解谜',
+            simulation: '模拟',
+            casual: '休闲',
+            action: '动作',
+            adventure: '冒险',
+            strategy: '策略',
+            sports: '体育',
+            racing: '竞速',
+            dressup: '装扮',
+            care: '护理'
+        },
+        tags: {
+            cute: '可爱',
+            anime: '二次元',
+            dark: '暗黑',
+            funny: '搞笑',
+            educational: '教育',
+            multiplayer: '多人',
+            relaxing: '放松',
+            challenging: '挑战',
+            colorful: '色彩丰富',
+            simple: '简单',
+            complex: '复杂',
+            family: '家庭友好',
+            kids: '儿童',
+            adult: '成人'
         }
     },
 
