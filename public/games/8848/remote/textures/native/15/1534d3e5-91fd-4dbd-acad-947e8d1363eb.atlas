@@ -1,0 +1,83 @@
+
+cg5.png
+size: 938,189
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+cata_5
+  rotate: false
+  xy: 376, 58
+  size: 92, 129
+  orig: 94, 131
+  offset: 1, 1
+  index: -1
+cata_head_5
+  rotate: false
+  xy: 840, 6
+  size: 75, 89
+  orig: 77, 91
+  offset: 1, 1
+  index: -1
+cata_tail_5
+  rotate: false
+  xy: 376, 16
+  size: 57, 40
+  orig: 58, 40
+  offset: 1, 0
+  index: -1
+catb_5
+  rotate: true
+  xy: 840, 97
+  size: 90, 96
+  orig: 92, 98
+  offset: 1, 1
+  index: -1
+catc_5
+  rotate: true
+  xy: 2, 2
+  size: 185, 330
+  orig: 188, 332
+  offset: 1, 1
+  index: -1
+catc_tail_5
+  rotate: true
+  xy: 551, 4
+  size: 70, 209
+  orig: 70, 209
+  offset: 0, 0
+  index: -1
+yingzi_cata_5
+  rotate: false
+  xy: 435, 17
+  size: 114, 39
+  orig: 116, 41
+  offset: 1, 1
+  index: -1
+yingzi_catb_5
+  rotate: true
+  xy: 917, 15
+  size: 80, 17
+  orig: 82, 19
+  offset: 1, 1
+  index: -1
+yingzi_catc_5
+  rotate: true
+  xy: 334, 15
+  size: 172, 40
+  orig: 174, 42
+  offset: 1, 1
+  index: -1
+yun_5
+  rotate: false
+  xy: 549, 76
+  size: 289, 111
+  orig: 292, 113
+  offset: 1, 1
+  index: -1
+zhi_5
+  rotate: false
+  xy: 470, 69
+  size: 77, 118
+  orig: 77, 139
+  offset: 0, 10
+  index: -1

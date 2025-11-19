@@ -1,0 +1,20 @@
+
+xiuli.png
+size: 161,88
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+chuizi
+  rotate: true
+  xy: 105, 23
+  size: 63, 54
+  orig: 65, 56
+  offset: 1, 1
+  index: -1
+yan
+  rotate: false
+  xy: 2, 2
+  size: 101, 84
+  orig: 103, 86
+  offset: 1, 1
+  index: -1

@@ -1,0 +1,82 @@
+all.png
+size: 1953,1095
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+man7_body
+  rotate: false
+  xy: 479, 491
+  size: 52, 57
+  orig: 52, 80
+  offset: 0, 0
+  index: -1
+man7_body2
+  rotate: true
+  xy: 1853, 346
+  size: 22, 41
+  orig: 24, 43
+  offset: 1, 1
+  index: -1
+man7_hand_l
+  rotate: false
+  xy: 1805, 451
+  size: 13, 51
+  orig: 15, 53
+  offset: 1, 1
+  index: -1
+man7_hand_r
+  rotate: false
+  xy: 776, 2
+  size: 16, 46
+  orig: 18, 48
+  offset: 1, 1
+  index: -1
+man7_head
+  rotate: true
+  xy: 1346, 90
+  size: 37, 44
+  orig: 39, 46
+  offset: 1, 1
+  index: -1
+man7_head2
+  rotate: true
+  xy: 1897, 161
+  size: 13, 26
+  orig: 15, 28
+  offset: 1, 1
+  index: -1
+man7_head3
+  rotate: true
+  xy: 1897, 70
+  size: 19, 20
+  orig: 21, 22
+  offset: 1, 1
+  index: -1
+man7_head4
+  rotate: true
+  xy: 1852, 325
+  size: 19, 37
+  orig: 21, 39
+  offset: 1, 1
+  index: -1
+man7_leg_l
+  rotate: false
+  xy: 1873, 225
+  size: 12, 36
+  orig: 14, 44
+  offset: 1, 1
+  index: -1
+man7_leg_r
+  rotate: false
+  xy: 1727, 230
+  size: 20, 34
+  orig: 22, 36
+  offset: 1, 1
+  index: -1
+man7_tail
+  rotate: true
+  xy: 1901, 450
+  size: 37, 31
+  orig: 39, 33
+  offset: 1, 1
+  index: -1

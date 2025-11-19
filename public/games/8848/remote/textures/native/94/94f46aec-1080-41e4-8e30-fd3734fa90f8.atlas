@@ -1,0 +1,55 @@
+
+zhifeijimao.png
+size: 197,613
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+a1
+  rotate: true
+  xy: 2, 2
+  size: 94, 156
+  orig: 94, 156
+  offset: 0, 0
+  index: -1
+a2
+  rotate: false
+  xy: 2, 98
+  size: 101, 162
+  orig: 101, 162
+  offset: 0, 0
+  index: -1
+a3
+  rotate: false
+  xy: 2, 262
+  size: 99, 168
+  orig: 99, 168
+  offset: 0, 0
+  index: -1
+a4
+  rotate: false
+  xy: 103, 441
+  size: 88, 170
+  orig: 88, 170
+  offset: 0, 0
+  index: -1
+a5
+  rotate: false
+  xy: 103, 275
+  size: 92, 164
+  orig: 92, 164
+  offset: 0, 0
+  index: -1
+a6
+  rotate: false
+  xy: 105, 104
+  size: 80, 169
+  orig: 80, 169
+  offset: 0, 0
+  index: -1
+a7
+  rotate: false
+  xy: 2, 432
+  size: 99, 179
+  orig: 99, 179
+  offset: 0, 0
+  index: -1

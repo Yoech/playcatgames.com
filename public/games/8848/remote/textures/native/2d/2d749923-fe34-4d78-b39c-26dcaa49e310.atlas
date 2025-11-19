@@ -1,0 +1,13 @@
+
+cg3.png
+size: 789,782
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+hand_3
+  rotate: false
+  xy: 2, 2
+  size: 785, 778
+  orig: 785, 778
+  offset: 0, 0
+  index: -1

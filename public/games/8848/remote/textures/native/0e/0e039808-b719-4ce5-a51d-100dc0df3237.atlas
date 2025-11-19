@@ -1,0 +1,27 @@
+
+cat_tingke.png
+size: 106,52
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+tingke_body
+  rotate: false
+  xy: 59, 19
+  size: 38, 31
+  orig: 40, 33
+  offset: 1, 1
+  index: -1
+tingke_head
+  rotate: false
+  xy: 2, 3
+  size: 55, 47
+  orig: 57, 49
+  offset: 1, 1
+  index: -1
+tingke_tail
+  rotate: true
+  xy: 59, 2
+  size: 15, 45
+  orig: 15, 45
+  offset: 0, 0
+  index: -1

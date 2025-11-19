@@ -1,0 +1,27 @@
+
+cat_pao2.png
+size: 384,247
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+paobuji
+  rotate: false
+  xy: 2, 2
+  size: 315, 243
+  orig: 317, 245
+  offset: 1, 1
+  index: -1
+paodao
+  rotate: true
+  xy: 319, 122
+  size: 123, 63
+  orig: 125, 65
+  offset: 1, 1
+  index: -1
+图层 2
+  rotate: false
+  xy: 319, 96
+  size: 1, 24
+  orig: 1, 24
+  offset: 0, 0
+  index: -1

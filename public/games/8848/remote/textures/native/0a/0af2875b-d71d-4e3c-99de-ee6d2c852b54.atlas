@@ -1,0 +1,13 @@
+
+pohuaibo.png
+size: 260,257
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+pohuaibo
+  rotate: false
+  xy: 2, 2
+  size: 256, 253
+  orig: 256, 256
+  offset: 0, 0
+  index: -1

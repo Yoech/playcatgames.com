@@ -1,0 +1,27 @@
+
+skeleton.png
+size: 163,72
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+BM_WanCheng
+  rotate: false
+  xy: 133, 42
+  size: 28, 28
+  orig: 28, 28
+  offset: 0, 0
+  index: -1
+q1
+  rotate: false
+  xy: 2, 2
+  size: 70, 68
+  orig: 70, 70
+  offset: 0, 2
+  index: -1
+q2
+  rotate: false
+  xy: 74, 12
+  size: 57, 58
+  orig: 58, 58
+  offset: 0, 0
+  index: -1

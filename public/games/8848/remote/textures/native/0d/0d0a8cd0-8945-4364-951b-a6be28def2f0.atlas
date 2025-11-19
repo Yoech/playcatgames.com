@@ -1,0 +1,96 @@
+all.png
+size: 1953,1095
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+man1_body
+  rotate: false
+  xy: 1784, 2
+  size: 25, 21
+  orig: 27, 23
+  offset: 1, 1
+  index: -1
+man1_body2
+  rotate: false
+  xy: 1925, 171
+  size: 26, 15
+  orig: 28, 17
+  offset: 1, 1
+  index: -1
+man1_body3
+  rotate: false
+  xy: 1731, 118
+  size: 25, 36
+  orig: 27, 38
+  offset: 1, 1
+  index: -1
+man1_eye
+  rotate: false
+  xy: 205, 217
+  size: 27, 10
+  orig: 29, 12
+  offset: 1, 1
+  index: -1
+man1_eye2
+  rotate: false
+  xy: 192, 576
+  size: 26, 4
+  orig: 28, 6
+  offset: 1, 1
+  index: -1
+man1_hand_l
+  rotate: false
+  xy: 1758, 118
+  size: 22, 36
+  orig: 24, 38
+  offset: 1, 1
+  index: -1
+man1_hand_r
+  rotate: false
+  xy: 1845, 5
+  size: 15, 25
+  orig: 17, 38
+  offset: 1, 12
+  index: -1
+man1_hand_r2
+  rotate: false
+  xy: 1862, 12
+  size: 14, 15
+  orig: 16, 17
+  offset: 1, 1
+  index: -1
+man1_head
+  rotate: true
+  xy: 682, 175
+  size: 46, 48
+  orig: 48, 50
+  offset: 1, 1
+  index: -1
+man1_head2
+  rotate: false
+  xy: 1877, 52
+  size: 17, 19
+  orig: 19, 21
+  offset: 1, 1
+  index: -1
+man1_head3
+  rotate: true
+  xy: 879, 274
+  size: 16, 19
+  orig: 18, 21
+  offset: 1, 1
+  index: -1
+man1_head4
+  rotate: false
+  xy: 1896, 119
+  size: 29, 15
+  orig: 31, 17
+  offset: 1, 1
+  index: -1
+man1_head5
+  rotate: true
+  xy: 1865, 64
+  size: 16, 10
+  orig: 18, 12
+  offset: 1, 1
+  index: -1
