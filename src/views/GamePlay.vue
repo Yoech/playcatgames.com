@@ -200,10 +200,10 @@ export default {
         // 增加点击次数
         incrementGameClicks(gameId)
         
-        // 获取游戏URL - 在开发环境自动转换为本地URL
+        // 获取游戏URL - 直接使用完整URL
         const webLink = game.value.storeLinks?.web
         if (webLink) {
-          gameUrl.value = convertGameUrlForDev(webLink)
+          gameUrl.value = webLink
         } else {
           frameError.value = true
         }

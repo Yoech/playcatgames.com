@@ -59,7 +59,7 @@ export const gamesData = [
         rating: 4.5,
         clickCount: 15420,
         storeLinks: {
-            [gameStores.WEB]: 'https://playcatgames.com/games/8848/', // 完整游戏URL
+            [gameStores.WEB]: 'https://playcatgames.com/games/8848/',
             [gameStores.APP_STORE]: null,
             [gameStores.GOOGLE_PLAY]: null
         },
