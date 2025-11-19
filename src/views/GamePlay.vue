@@ -370,6 +370,7 @@ export default {
 <style scoped>
 .game-play-container {
   user-select: none;
+  touch-action: manipulation; /* 禁用双击缩放 */
 }
 
 .loading-spinner {
