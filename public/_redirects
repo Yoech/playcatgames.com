@@ -1,6 +1,0 @@
-# SPA 路由重定向规则
-/play/*  /index.html  200
-/privacy  /index.html  200
-/terms  /index.html  200
-/cookies  /index.html  200
-/sitemap  /index.html  200
