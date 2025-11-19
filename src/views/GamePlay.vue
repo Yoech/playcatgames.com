@@ -189,12 +189,18 @@ export default {
     const loadGame = () => {
       const gameId = parseInt(route.params.id)
       
+      console.log('Route params:', route.params)
+      console.log('Game ID:', gameId)
+      
       if (isNaN(gameId)) {
+        console.log('Invalid game ID')
         loading.value = false
         return
       }
 
       game.value = getGameById(gameId)
+      
+      console.log('Game found:', game.value)
       
       if (game.value) {
         // 增加点击次数
@@ -204,6 +210,7 @@ export default {
         const webLink = game.value.storeLinks?.web
         if (webLink) {
           gameUrl.value = webLink
+          console.log('Game URL:', gameUrl.value)
         } else {
           frameError.value = true
         }
@@ -213,6 +220,7 @@ export default {
       }
       
       loading.value = false
+      console.log('Loading finished, loading value:', loading.value)
     }
 
     // 格式化点击数

@@ -144,7 +144,7 @@ export default {
     // 游戏点击处理
     const playGame = (game) => {
       // 在新窗口打开游戏试玩页面
-      const gameUrl = `/play/${game.id}`
+      const gameUrl = `/#/play/${game.id}`
       window.open(gameUrl, '_blank', 'noopener,noreferrer')
     }
     
