@@ -220,6 +220,7 @@ export default {
       }
       
       loading.value = false
+      frameLoading.value = false  // 同时关闭 iframe loading
       console.log('Loading finished, loading value:', loading.value)
     }
 
