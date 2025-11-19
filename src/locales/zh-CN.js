@@ -211,6 +211,25 @@ export default {
         backToHome: '返回首页'
     },
 
+    // Game Play Page
+    gamePage: {
+        plays: '次游玩',
+        share: '分享',
+        enterFullscreen: '全屏',
+        exitFullscreen: '退出全屏',
+        loadingGame: '游戏加载中...',
+        reload: '重新加载',
+        linkCopied: '链接已复制到剪贴板',
+        notFound: {
+            title: '游戏未找到',
+            message: '抱歉，我们找不到这个游戏。它可能已被移除或链接有误。'
+        },
+        loadError: {
+            title: '游戏加载失败',
+            message: '无法加载游戏内容，请检查网络连接或稍后再试。'
+        }
+    },
+
     // Legal Pages
     legal: {
         privacy: {

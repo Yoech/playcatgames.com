@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+import GamePlay from '../views/GamePlay.vue'
 import PrivacyPolicy from '../views/PrivacyPolicy.vue'
 import TermsOfService from '../views/TermsOfService.vue'
 import CookiePolicy from '../views/CookiePolicy.vue'
@@ -10,6 +11,14 @@ const routes = [
         path: '/',
         name: 'Home',
         component: Home
+    },
+    {
+        path: '/play/:id',
+        name: 'GamePlay',
+        component: GamePlay,
+        meta: {
+            title: 'Play Game - PlayCatGames'
+        }
     },
     {
         path: '/privacy',

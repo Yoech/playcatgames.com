@@ -93,3 +93,8 @@ temp/
 *~
 *.swp
 *.swo
+
+# Game directories - ignore all games but keep structure
+public/games/*
+!public/games/README.md
+!public/games/.gitkeep

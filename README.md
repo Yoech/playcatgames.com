@@ -53,6 +53,10 @@ npm run preview
 ```
 playcatgames.com/
 ├── public/                 # 静态资源
+│   ├── games/             # Cocos Creator 游戏目录
+│   │   ├── README.md      # 游戏部署说明
+│   │   ├── .gitkeep       # 保持目录结构
+│   │   └── [gameId]/      # 具体游戏文件（由开发者添加）
 │   └── cat-icon.svg       # 网站图标
 ├── src/
 │   ├── components/        # Vue组件
@@ -62,20 +66,34 @@ playcatgames.com/
 │   │   ├── CategoriesSection.vue # 分类展示
 │   │   ├── AboutSection.vue # 关于页面
 │   │   ├── Footer.vue     # 页脚
+│   │   ├── SearchBox.vue  # 搜索框
 │   │   └── LanguageSelector.vue # 语言选择器
+│   ├── views/             # 页面视图
+│   │   └── GamePlay.vue   # 游戏播放模板页
+│   ├── data/              # 数据文件
+│   │   ├── gamesData.js   # 游戏数据
+│   │   ├── friendlyLinks.js # 友情链接
+│   │   └── index.js       # 数据入口
+│   ├── stores/            # 状态管理
+│   │   └── search.js      # 搜索状态
+│   ├── utils/             # 工具函数
+│   │   └── urlHelpers.js  # URL处理工具
 │   ├── locales/           # 国际化文件
 │   │   ├── zh-CN.js      # 中文
 │   │   ├── en.js         # 英文
-│   │   ├── ja.js         # 日文
-│   │   ├── ko.js         # 韩文
-│   │   ├── tr.js         # 土耳其文
-│   │   ├── es.js         # 西班牙文
-│   │   ├── fr.js         # 法文
-│   │   ├── ru.js         # 俄文
-│   │   └── index.js      # i18n配置
+│   │   └── ...           # 其他语言
+│   ├── router/            # 路由配置
+│   │   └── index.js      # Vue Router
 │   ├── App.vue           # 主应用组件
 │   ├── main.js           # 应用入口
 │   └── style.css         # 全局样式
+├── scripts/              # 部署脚本
+│   ├── deploy-game.ps1   # Windows部署脚本
+│   └── deploy-game.sh    # Linux/Mac部署脚本
+├── docs/                 # 文档
+│   ├── COCOS_CREATOR_INTEGRATION.md  # Cocos集成指南
+│   ├── GAME_URL_HANDLING.md          # URL处理说明
+│   └── ...
 ├── index.html            # HTML模板
 ├── package.json          # 项目配置
 ├── vite.config.js        # Vite配置
@@ -83,7 +101,40 @@ playcatgames.com/
 └── postcss.config.js     # PostCSS配置
 ```
 
-## � 多语言支持
+## 🎮 添加 Cocos Creator 游戏
+
+本项目支持集成 Cocos Creator 3.8.5 打包的 H5 游戏。
+
+### 快速开始
+
+1. **打包游戏**
+   - 在 Cocos Creator 中选择 Web Mobile 平台
+   - 构建并导出游戏文件
+
+2. **部署游戏**
+
+   **Windows:**
+   ```powershell
+   .\scripts\deploy-game.ps1 -GameId 8848 -SourcePath "C:\path\to\cocos\web-mobile"
+   ```
+
+   **Linux/Mac:**
+   ```bash
+   chmod +x scripts/deploy-game.sh
+   ./scripts/deploy-game.sh 8848 /path/to/cocos/web-mobile
+   ```
+
+3. **注册游戏**
+   - 在 `src/data/gamesData.js` 中添加游戏信息
+   - 配置游戏名称、描述、分类等
+
+4. **测试游戏**
+   - 直接访问: `http://localhost:3002/games/8848/`
+   - 模板页: `http://localhost:3002/play/8848`
+
+📖 详细说明请参考 [Cocos Creator 集成指南](docs/COCOS_CREATOR_INTEGRATION.md)
+
+## 🌍 多语言支持
 
 网站支持以下8种语言：
 

@@ -211,6 +211,25 @@ export default {
         backToHome: 'Back to Home'
     },
 
+    // Game Play Page
+    gamePage: {
+        plays: 'plays',
+        share: 'Share',
+        enterFullscreen: 'Fullscreen',
+        exitFullscreen: 'Exit Fullscreen',
+        loadingGame: 'Loading game...',
+        reload: 'Reload',
+        linkCopied: 'Link copied to clipboard',
+        notFound: {
+            title: 'Game Not Found',
+            message: 'Sorry, we couldn\'t find this game. It may have been removed or the link is incorrect.'
+        },
+        loadError: {
+            title: 'Failed to Load Game',
+            message: 'Unable to load game content. Please check your connection or try again later.'
+        }
+    },
+
     // Legal Pages
     legal: {
         privacy: {

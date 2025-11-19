@@ -143,21 +143,9 @@ export default {
     
     // 游戏点击处理
     const playGame = (game) => {
-      incrementGameClicks(game.id)
-      
-      // 检查storeLinks并打开对应链接
-      if (game.storeLinks) {
-        // 优先打开web链接
-        if (game.storeLinks.web) {
-          window.open(game.storeLinks.web, '_blank')
-        } else {
-          // 如果没有web链接，打开第一个可用的链接
-          const firstAvailableLink = Object.values(game.storeLinks).find(link => link)
-          if (firstAvailableLink) {
-            window.open(firstAvailableLink, '_blank')
-          }
-        }
-      }
+      // 在新窗口打开游戏试玩页面
+      const gameUrl = `/play/${game.id}`
+      window.open(gameUrl, '_blank', 'noopener,noreferrer')
     }
     
     // 获取标签颜色类

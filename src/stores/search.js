@@ -1,5 +1,5 @@
 import { ref, computed, readonly } from 'vue'
-import { gamesData } from '@/data/gamesData'
+import { getAllGames } from '@/data/gamesData'
 
 // 全局搜索状态
 const searchQuery = ref('')
@@ -25,7 +25,7 @@ export const useSearch = () => {
 
     // 过滤游戏
     const filteredGames = computed(() => {
-        let games = [...gamesData]
+        let games = getAllGames() // 已按 orderId 降序排列
 
         // 按分类过滤
         if (activeCategory.value !== 'all') {
@@ -55,9 +55,10 @@ export const useSearch = () => {
 
         const suggestions = []
         const query = searchQuery.value
+        const allGames = getAllGames()
 
         // 游戏名称建议
-        gamesData.forEach(game => {
+        allGames.forEach(game => {
             if (game.name.toLowerCase().includes(query)) {
                 suggestions.push({
                     type: 'game',
@@ -70,7 +71,7 @@ export const useSearch = () => {
 
         // 标签建议
         const allTags = new Set()
-        gamesData.forEach(game => {
+        allGames.forEach(game => {
             game.tags.forEach(tag => {
                 if (tag.id.toLowerCase().includes(query)) {
                     allTags.add(tag.id)

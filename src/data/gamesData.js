@@ -47,18 +47,19 @@ export const gameStores = {
 // 游戏数据
 export const gamesData = [
     {
-        id: 1,
-        name: 'Kitty Loves Birds',
-        nameKey: 'games.kittyLovesBirds.name',
-        description: 'Help the adorable kitten catch flying birds in this fun reaction-based game',
-        descriptionKey: 'games.kittyLovesBirds.description',
+        id: 8848,
+        orderId: 8,
+        name: 'Cat Cafe',
+        nameKey: 'com.playcatgames.catcafe',
+        description: 'Have fun managing your business in this fun simulation game!',
+        descriptionKey: 'games.catCafe.description',
         logo: 'https://img.poki-cdn.com/cdn-cgi/image/quality=78,width=194,height=194,fit=cover,f=auto/52137b41ccfdf27fd24bb3e01d0a0eb1.png',
         category: gameCategories.ARCADE,
         tags: [gameTags.CUTE, gameTags.FUNNY, gameTags.SINGLE_PLAYER],
         rating: 4.5,
         clickCount: 15420,
         storeLinks: {
-            [gameStores.WEB]: 'https://poki.com/en/g/kitty-loves-birds',
+            [gameStores.WEB]: 'https://playcatgames.com/games/8848/', // 完整游戏URL
             [gameStores.APP_STORE]: null,
             [gameStores.GOOGLE_PLAY]: null
         },
@@ -68,6 +69,7 @@ export const gamesData = [
     },
     {
         id: 2,
+        orderId: 7,
         name: 'Cat Pizza',
         nameKey: 'games.catPizza.name',
         description: 'Run your own cat-themed pizza restaurant and serve delicious meals',
@@ -88,6 +90,7 @@ export const gamesData = [
     },
     {
         id: 3,
+        orderId: 6,
         name: 'Funny Kitty Care',
         nameKey: 'games.funnyKittyCare.name',
         description: 'Take care of adorable kittens - feed, bathe, and play with them',
@@ -108,6 +111,7 @@ export const gamesData = [
     },
     {
         id: 4,
+        orderId: 5,
         name: 'Cat Simulator',
         nameKey: 'games.catSimulator.name',
         description: 'Experience life as a cat in this realistic simulation game',
@@ -127,6 +131,7 @@ export const gamesData = [
     },
     {
         id: 5,
+        orderId: 4,
         name: 'Kitten Dress Up',
         nameKey: 'games.kittenDressUp.name',
         description: 'Dress up cute kittens with adorable outfits and accessories',
@@ -147,6 +152,7 @@ export const gamesData = [
     },
     {
         id: 6,
+        orderId: 3,
         name: 'Cat Puzzle Adventure',
         nameKey: 'games.catPuzzleAdventure.name',
         description: 'Solve challenging puzzles with your feline friend in this brain-teasing adventure',
@@ -166,6 +172,7 @@ export const gamesData = [
     },
     {
         id: 7,
+        orderId: 2,
         name: 'Ninja Cat',
         nameKey: 'games.ninjaCat.name',
         description: 'Join the stealthy ninja cat on an epic action-packed adventure',
@@ -186,6 +193,7 @@ export const gamesData = [
     },
     {
         id: 8,
+        orderId: 1,
         name: 'Anime Cat Girl',
         nameKey: 'games.animeCatGirl.name',
         description: 'Create and customize your own anime-style cat girl character',
@@ -207,16 +215,23 @@ export const gamesData = [
 
 // ===== 游戏工具函数 =====
 
+// 获取所有游戏（按 orderId 降序排列）
+export const getAllGames = () => {
+    return [...gamesData].sort((a, b) => b.orderId - a.orderId)
+}
+
 // 根据分类筛选游戏
 export const getGamesByCategory = (category) => {
-    return gamesData.filter(game => game.category === category)
+    return gamesData
+        .filter(game => game.category === category)
+        .sort((a, b) => b.orderId - a.orderId)
 }
 
 // 根据标签筛选游戏
 export const getGamesByTag = (tagId) => {
-    return gamesData.filter(game =>
-        game.tags.some(tag => tag.id === tagId)
-    )
+    return gamesData
+        .filter(game => game.tags.some(tag => tag.id === tagId))
+        .sort((a, b) => b.orderId - a.orderId)
 }
 
 // 获取热门游戏（根据点击次数排序）
@@ -271,17 +286,19 @@ export const getRecentlyUpdatedGames = (limit = 6) => {
 // 搜索游戏
 export const searchGames = (query) => {
     if (!query || query.trim().length === 0) {
-        return gamesData
+        return getAllGames()
     }
 
     const searchQuery = query.toLowerCase().trim()
-    return gamesData.filter(game => {
-        return (
-            game.name.toLowerCase().includes(searchQuery) ||
-            game.description.toLowerCase().includes(searchQuery) ||
-            game.tags.some(tag => tag.id.toLowerCase().includes(searchQuery))
-        )
-    })
+    return gamesData
+        .filter(game => {
+            return (
+                game.name.toLowerCase().includes(searchQuery) ||
+                game.description.toLowerCase().includes(searchQuery) ||
+                game.tags.some(tag => tag.id.toLowerCase().includes(searchQuery))
+            )
+        })
+        .sort((a, b) => b.orderId - a.orderId)
 }
 
 // 获取随机游戏
@@ -335,7 +352,7 @@ export const getTagStats = () => {
 
 // 验证游戏数据
 export const validateGameData = (game) => {
-    const requiredFields = ['id', 'name', 'description', 'logo', 'category', 'tags', 'rating']
+    const requiredFields = ['id', 'orderId', 'name', 'description', 'logo', 'category', 'tags', 'rating']
 
     return requiredFields.every(field => {
         if (field === 'tags') {
@@ -343,6 +360,9 @@ export const validateGameData = (game) => {
         }
         if (field === 'rating') {
             return typeof game[field] === 'number' && game[field] >= 0 && game[field] <= 5
+        }
+        if (field === 'orderId') {
+            return typeof game[field] === 'number' && game[field] > 0
         }
         return game[field] !== undefined && game[field] !== null && game[field] !== ''
     })
