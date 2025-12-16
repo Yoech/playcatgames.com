@@ -8,78 +8,68 @@
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <!-- Header -->
         <div class="text-center mb-12">
-          <h1 class="text-4xl font-bold text-text-primary mb-4">{{ $t('legal.privacy.title') }}</h1>
-          <p class="text-lg text-text-secondary">{{ $t('legal.privacy.lastUpdated') }}: 2024年11月1日</p>
+          <h1 class="text-4xl font-bold text-text-primary mb-4">Privacy Policy</h1>
+          <p class="text-lg text-text-secondary">Last Updated: December 16, 2025</p>
         </div>
 
         <!-- Content -->
         <div class="bg-white rounded-lg shadow-lg p-8 prose max-w-none">
-          <template v-if="hasFullTranslation">
-            <h2>{{ $t('legal.privacy.sections.overview.title') }}</h2>
-            <p>{{ $t('legal.privacy.sections.overview.content') }}</p>
-
-            <h2>{{ $t('legal.privacy.sections.dataCollection.title') }}</h2>
-            <p>{{ $t('legal.privacy.sections.dataCollection.intro') }}</p>
-            <ul>
-              <li v-for="item in $t('legal.privacy.sections.dataCollection.items')" :key="item">{{ item }}</li>
-            </ul>
-
-            <h2>{{ $t('legal.privacy.sections.dataUsage.title') }}</h2>
-            <p>{{ $t('legal.privacy.sections.dataUsage.intro') }}</p>
-            <ul>
-              <li v-for="item in $t('legal.privacy.sections.dataUsage.items')" :key="item">{{ item }}</li>
-            </ul>
-
-            <h2>{{ $t('legal.privacy.sections.cookies.title') }}</h2>
-            <p>{{ $t('legal.privacy.sections.cookies.content') }}</p>
-
-            <h2>{{ $t('legal.privacy.sections.thirdParty.title') }}</h2>
-            <p>{{ $t('legal.privacy.sections.thirdParty.content') }}</p>
-
-            <h2>{{ $t('legal.privacy.sections.security.title') }}</h2>
-            <p>{{ $t('legal.privacy.sections.security.content') }}</p>
-
-            <h2>{{ $t('legal.privacy.sections.children.title') }}</h2>
-            <p>{{ $t('legal.privacy.sections.children.content') }}</p>
-
-            <h2>{{ $t('legal.privacy.sections.changes.title') }}</h2>
-            <p>{{ $t('legal.privacy.sections.changes.content') }}</p>
-
-            <h2>{{ $t('legal.privacy.sections.contact.title') }}</h2>
-            <p>{{ $t('legal.privacy.sections.contact.content') }}</p>
-            <p><strong>{{ $t('legal.privacy.sections.contact.email') }}:</strong> privacy@playcatgames.com</p>
-          </template>
+          <h2 class="text-2xl font-bold mb-4">Privacy Policy</h2>
+          <p class="mb-4">This privacy policy applies to the Kedi Kafesi Sim app (hereby referred to as "Application") for mobile devices that was created by (hereby referred to as "Service Provider") as an Ad Supported service. This service is intended for use "AS IS".</p>
           
-          <!-- Fallback content for incomplete translations -->
-          <template v-else>
-            <div class="text-center py-8">
-              <p class="text-lg text-text-secondary mb-4">
-                {{ getCurrentLanguage() === 'zh-CN' ? '完整的隐私政策正在翻译中...' : 'Full privacy policy translation is in progress...' }}
-              </p>
-              <p class="text-text-secondary mb-6">
-                {{ getCurrentLanguage() === 'zh-CN' ? '请查看' : 'Please refer to the' }} 
-                <button @click="changeToLanguage('zh-CN')" class="text-primary hover:underline mx-1">中文版本</button>
-                {{ getCurrentLanguage() === 'zh-CN' ? '或' : 'or' }}
-                <button @click="changeToLanguage('en')" class="text-primary hover:underline mx-1">English version</button>
-                {{ getCurrentLanguage() === 'zh-CN' ? '获取完整信息。' : 'for complete information.' }}
-              </p>
-              
-              <!-- Basic information in current language -->
-              <div class="bg-gray-50 rounded-lg p-6 text-left">
-                <h3 class="text-lg font-semibold mb-3">{{ getCurrentLanguage() === 'zh-CN' ? '基本信息' : 'Basic Information' }}</h3>
-                <p class="text-text-secondary">
-                  {{ getCurrentLanguage() === 'zh-CN' 
-                    ? 'PlayCatGames 致力于保护您的隐私。我们收集最少必要的信息来提供服务，包括语言偏好和匿名使用统计。我们不会出售或分享您的个人信息。' 
-                    : 'PlayCatGames is committed to protecting your privacy. We collect minimal necessary information to provide services, including language preferences and anonymous usage statistics. We do not sell or share your personal information.' 
-                  }}
-                </p>
-                <p class="text-text-secondary mt-2">
-                  <strong>{{ getCurrentLanguage() === 'zh-CN' ? '联系邮箱：' : 'Contact Email: ' }}</strong>
-                  privacy@playcatgames.com
-                </p>
-              </div>
-            </div>
-          </template>
+          <h3 class="text-xl font-bold mt-6 mb-3">Information Collection and Use</h3>
+          <p class="mb-3">The Application collects information when you download and use it. This information may include information such as:</p>
+          <ul class="list-disc pl-6 mb-4">
+            <li>Your device's Internet Protocol address (e.g. IP address)</li>
+            <li>The pages of the Application that you visit, the time and date of your visit, the time spent on those pages</li>
+            <li>The time spent on the Application</li>
+            <li>The operating system you use on your mobile device</li>
+          </ul>
+          <p class="mb-4">The Application does not gather precise information about the location of your mobile device.</p>
+          <p class="mb-4">The Service Provider may use the information you provided to contact you from time to time to provide you with important information, required notices and marketing promotions.</p>
+          <p class="mb-4">For a better experience, while using the Application, the Service Provider may require you to provide us with certain personally identifiable information. The information that the Service Provider request will be retained by them and used as described in this privacy policy.</p>
+          
+          <h3 class="text-xl font-bold mt-6 mb-3">Third Party Access</h3>
+          <p class="mb-3">Only aggregated, anonymized data is periodically transmitted to external services to aid the Service Provider in improving the Application and their service. The Service Provider may share your information with third parties in the ways that are described in this privacy statement.</p>
+          <p class="mb-3">Please note that the Application utilizes third-party services that have their own Privacy Policy about handling data. Below are the links to the Privacy Policy of the third-party service providers used by the Application:</p>
+          <ul class="list-disc pl-6 mb-4">
+            <li><a href="https://www.google.com/policies/privacy/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Google Play Services</a></li>
+            <li><a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">AdMob</a></li>
+            <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Google Analytics for Firebase</a></li>
+            <li><a href="https://firebase.google.com/support/privacy/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Firebase Crashlytics</a></li>
+            <li><a href="https://www.facebook.com/about/privacy/update/printable" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Facebook</a></li>
+            <li><a href="https://www.applovin.com/privacy/" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">AppLovin</a></li>
+            <li><a href="https://www.adjust.com/terms/privacy-policy" target="_blank" rel="noopener noreferrer" class="text-primary hover:underline">Adjust</a></li>
+          </ul>
+          <p class="mb-3">The Service Provider may disclose User Provided and Automatically Collected Information:</p>
+          <ul class="list-disc pl-6 mb-4">
+            <li>as required by law, such as to comply with a subpoena, or similar legal process;</li>
+            <li>when they believe in good faith that disclosure is necessary to protect their rights, protect your safety or the safety of others, investigate fraud, or respond to a government request;</li>
+            <li>with their trusted services providers who work on their behalf, do not have an independent use of the information we disclose to them, and have agreed to adhere to the rules set forth in this privacy statement.</li>
+          </ul>
+          
+          <h3 class="text-xl font-bold mt-6 mb-3">Opt-Out Rights</h3>
+          <p class="mb-4">You can stop all collection of information by the Application easily by uninstalling it. You may use the standard uninstall processes as may be available as part of your mobile device or via the mobile application marketplace or network.</p>
+          
+          <h3 class="text-xl font-bold mt-6 mb-3">Data Retention Policy</h3>
+          <p class="mb-4">The Service Provider will retain User Provided data for as long as you use the Application and for a reasonable time thereafter. If you'd like them to delete User Provided Data that you have provided via the Application, please contact them at contact@playcatgames.com and they will respond in a reasonable time.</p>
+          
+          <h3 class="text-xl font-bold mt-6 mb-3">Children</h3>
+          <p class="mb-4">The Service Provider does not use the Application to knowingly solicit data from or market to children under the age of 13.</p>
+          <p class="mb-4">The Application does not address anyone under the age of 13. The Service Provider does not knowingly collect personally identifiable information from children under 13 years of age. In the case the Service Provider discover that a child under 13 has provided personal information, the Service Provider will immediately delete this from their servers. If you are a parent or guardian and you are aware that your child has provided us with personal information, please contact the Service Provider (contact@playcatgames.com) so that they will be able to take the necessary actions.</p>
+          
+          <h3 class="text-xl font-bold mt-6 mb-3">Security</h3>
+          <p class="mb-4">The Service Provider is concerned about safeguarding the confidentiality of your information. The Service Provider provides physical, electronic, and procedural safeguards to protect information the Service Provider processes and maintains.</p>
+          
+          <h3 class="text-xl font-bold mt-6 mb-3">Changes</h3>
+          <p class="mb-4">This Privacy Policy may be updated from time to time for any reason. The Service Provider will notify you of any changes to the Privacy Policy by updating this page with the new Privacy Policy. You are advised to consult this Privacy Policy regularly for any changes, as continued use is deemed approval of all changes.</p>
+          <p class="mb-4"><strong>This privacy policy is effective as of 2025-12-16</strong></p>
+          
+          <h3 class="text-xl font-bold mt-6 mb-3">Your Consent</h3>
+          <p class="mb-4">By using the Application, you are consenting to the processing of your information as set forth in this Privacy Policy now and as amended by us.</p>
+          
+          <h3 class="text-xl font-bold mt-6 mb-3">Contact Us</h3>
+          <p class="mb-4">If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at <a href="mailto:contact@playcatgames.com" class="text-primary hover:underline">contact@playcatgames.com</a>.</p>
         </div>
 
         <!-- Back Button -->
