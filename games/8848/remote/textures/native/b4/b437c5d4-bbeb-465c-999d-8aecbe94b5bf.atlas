@@ -1,0 +1,13 @@
+
+cat_taoquan2.png
+size: 202,292
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+taoquanji
+  rotate: false
+  xy: 2, 2
+  size: 198, 288
+  orig: 273, 326
+  offset: 0, 38
+  index: -1

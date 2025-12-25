@@ -1,0 +1,139 @@
+
+xinshouyindao.png
+size: 1232,300
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+body
+  rotate: true
+  xy: 286, 98
+  size: 200, 580
+  orig: 214, 583
+  offset: 13, 1
+  index: -1
+body2
+  rotate: true
+  xy: 965, 143
+  size: 155, 129
+  orig: 157, 131
+  offset: 1, 1
+  index: -1
+body3
+  rotate: true
+  xy: 868, 141
+  size: 157, 95
+  orig: 159, 97
+  offset: 1, 1
+  index: -1
+ear_l
+  rotate: true
+  xy: 1096, 192
+  size: 106, 134
+  orig: 109, 136
+  offset: 2, 1
+  index: -1
+ear_r
+  rotate: false
+  xy: 931, 2
+  size: 115, 137
+  orig: 118, 139
+  offset: 1, 1
+  index: -1
+eye_l
+  rotate: false
+  xy: 1145, 132
+  size: 60, 58
+  orig: 62, 60
+  offset: 1, 1
+  index: -1
+eye_l2
+  rotate: false
+  xy: 766, 7
+  size: 61, 21
+  orig: 63, 23
+  offset: 1, 1
+  index: -1
+eye_r
+  rotate: true
+  xy: 766, 30
+  size: 66, 59
+  orig: 68, 61
+  offset: 1, 1
+  index: -1
+eye_r2
+  rotate: false
+  xy: 829, 11
+  size: 61, 21
+  orig: 63, 23
+  offset: 1, 1
+  index: -1
+hair
+  rotate: true
+  xy: 682, 11
+  size: 85, 82
+  orig: 85, 82
+  offset: 0, 0
+  index: -1
+hand_l
+  rotate: false
+  xy: 1048, 2
+  size: 95, 139
+  orig: 97, 141
+  offset: 1, 1
+  index: -1
+hand_l2
+  rotate: true
+  xy: 827, 34
+  size: 62, 101
+  orig: 63, 107
+  offset: 0, 5
+  index: -1
+hand_l3
+  rotate: true
+  xy: 286, 4
+  size: 92, 128
+  orig: 92, 210
+  offset: 0, 82
+  index: -1
+hand_r
+  rotate: true
+  xy: 543, 9
+  size: 87, 137
+  orig: 90, 139
+  offset: 1, 1
+  index: -1
+hand_r2
+  rotate: false
+  xy: 1145, 25
+  size: 59, 105
+  orig: 63, 108
+  offset: 2, 2
+  index: -1
+hand_r3
+  rotate: true
+  xy: 416, 6
+  size: 90, 125
+  orig: 92, 127
+  offset: 1, 1
+  index: -1
+head
+  rotate: false
+  xy: 2, 12
+  size: 282, 286
+  orig: 284, 292
+  offset: 1, 5
+  index: -1
+mouth
+  rotate: true
+  xy: 868, 107
+  size: 32, 9
+  orig: 38, 17
+  offset: 2, 2
+  index: -1
+mouth2
+  rotate: false
+  xy: 892, 12
+  size: 37, 20
+  orig: 39, 22
+  offset: 1, 1
+  index: -1

@@ -1,0 +1,34 @@
+
+cat_dishu.png
+size: 68,82
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dishu_arm
+  rotate: false
+  xy: 42, 9
+  size: 24, 24
+  orig: 24, 24
+  offset: 0, 0
+  index: -1
+dishu_body
+  rotate: false
+  xy: 2, 2
+  size: 38, 31
+  orig: 40, 33
+  offset: 1, 1
+  index: -1
+dishu_head
+  rotate: false
+  xy: 2, 35
+  size: 52, 45
+  orig: 54, 47
+  offset: 1, 1
+  index: -1
+dishu_tail
+  rotate: false
+  xy: 56, 36
+  size: 9, 44
+  orig: 9, 44
+  offset: 0, 0
+  index: -1

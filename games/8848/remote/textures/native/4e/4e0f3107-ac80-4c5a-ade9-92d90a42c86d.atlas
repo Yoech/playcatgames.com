@@ -1,0 +1,13 @@
+
+jiasuqi2.png
+size: 214,224
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+guangxiao
+  rotate: false
+  xy: 2, 2
+  size: 210, 220
+  orig: 228, 228
+  offset: 12, 8
+  index: -1

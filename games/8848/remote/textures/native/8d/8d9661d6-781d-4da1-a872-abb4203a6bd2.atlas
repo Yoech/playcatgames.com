@@ -1,0 +1,68 @@
+all.png
+size: 1953,1095
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+man115_body
+  rotate: true
+  xy: 318, 932
+  size: 50, 76
+  orig: 50, 129
+  offset: 0, 53
+  index: -1
+man115_hand_l
+  rotate: true
+  xy: 1046, 728
+  size: 19, 64
+  orig: 21, 66
+  offset: 1, 1
+  index: -1
+man115_hand_r
+  rotate: false
+  xy: 754, 632
+  size: 19, 61
+  orig: 21, 63
+  offset: 1, 1
+  index: -1
+man115_hand_r2
+  rotate: false
+  xy: 1425, 769
+  size: 32, 29
+  orig: 34, 31
+  offset: 1, 1
+  index: -1
+man115_head
+  rotate: false
+  xy: 1576, 666
+  size: 39, 40
+  orig: 41, 42
+  offset: 1, 1
+  index: -1
+man115_head2
+  rotate: false
+  xy: 905, 429
+  size: 45, 17
+  orig: 47, 19
+  offset: 1, 1
+  index: -1
+man115_head_h
+  rotate: false
+  xy: 1324, 451
+  size: 39, 40
+  orig: 41, 42
+  offset: 1, 1
+  index: -1
+man115_leg_l
+  rotate: false
+  xy: 882, 438
+  size: 21, 64
+  orig: 31, 64
+  offset: 1, 0
+  index: -1
+man115_leg_r
+  rotate: false
+  xy: 755, 493
+  size: 22, 65
+  orig: 27, 65
+  offset: 5, 0
+  index: -1

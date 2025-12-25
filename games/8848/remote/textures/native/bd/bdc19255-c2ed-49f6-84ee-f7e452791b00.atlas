@@ -1,0 +1,68 @@
+all.png
+size: 1953,1095
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+man117_body
+  rotate: false
+  xy: 243, 537
+  size: 80, 75
+  orig: 80, 117
+  offset: 0, 42
+  index: -1
+man117_hand_r
+  rotate: true
+  xy: 1326, 965
+  size: 25, 17
+  orig: 27, 19
+  offset: 1, 1
+  index: -1
+man117_hand_r2
+  rotate: true
+  xy: 839, 176
+  size: 33, 27
+  orig: 35, 29
+  offset: 1, 1
+  index: -1
+man117_hand_r3
+  rotate: true
+  xy: 1877, 73
+  size: 15, 18
+  orig: 17, 20
+  offset: 1, 1
+  index: -1
+man117_head
+  rotate: false
+  xy: 1568, 708
+  size: 47, 46
+  orig: 49, 48
+  offset: 1, 1
+  index: -1
+man117_head2
+  rotate: false
+  xy: 1686, 53
+  size: 19, 17
+  orig: 21, 20
+  offset: 1, 2
+  index: -1
+man117_head_h
+  rotate: true
+  xy: 1616, 756
+  size: 47, 46
+  orig: 49, 48
+  offset: 1, 1
+  index: -1
+man117_leg_l
+  rotate: false
+  xy: 759, 433
+  size: 24, 58
+  orig: 26, 60
+  offset: 1, 1
+  index: -1
+man117_leg_r
+  rotate: true
+  xy: 899, 554
+  size: 25, 59
+  orig: 27, 61
+  offset: 1, 1
+  index: -1

@@ -1,0 +1,61 @@
+all.png
+size: 1953,1095
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+man069_body
+  rotate: false
+  xy: 1010, 895
+  size: 43, 80
+  orig: 45, 82
+  offset: 1, 1
+  index: -1
+man069_hand_l
+  rotate: true
+  xy: 1770, 612
+  size: 19, 51
+  orig: 21, 53
+  offset: 1, 1
+  index: -1
+man069_hand_r
+  rotate: false
+  xy: 1530, 2
+  size: 18, 47
+  orig: 20, 49
+  offset: 1, 1
+  index: -1
+man069_hand_r2
+  rotate: true
+  xy: 1817, 229
+  size: 32, 29
+  orig: 35, 31
+  offset: 2, 1
+  index: -1
+man069_head
+  rotate: true
+  xy: 650, 299
+  size: 50, 55
+  orig: 52, 57
+  offset: 1, 1
+  index: -1
+man069_head_h
+  rotate: false
+  xy: 827, 303
+  size: 50, 55
+  orig: 52, 57
+  offset: 1, 1
+  index: -1
+man069_leg_l
+  rotate: true
+  xy: 1010, 175
+  size: 27, 54
+  orig: 29, 56
+  offset: 1, 1
+  index: -1
+man069_leg_r
+  rotate: false
+  xy: 1571, 443
+  size: 26, 52
+  orig: 28, 54
+  offset: 1, 1
+  index: -1
